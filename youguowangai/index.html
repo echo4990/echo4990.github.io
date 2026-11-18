@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>优果网艾小青-水果供应链人物与选品观察</title>
+<meta name="description" content="优果网艾小青是水果供应链选品与产地行情记录站点，聚焦艾小青团队的产地走访、品种评测、采购谈判与档口反馈，追踪价格波动、冷链损耗与当季爆款，帮助果商与门店选到对路货。">
+<meta name="keywords" content="优果网艾小青">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='38' r='20' fill='%23d94f2b'/%3E%3Cpath d='M32 18c2-8 8-12 14-13-2 7-7 11-14 13z' fill='%232e7d32'/%3E%3Cpath d='M30 20l-3-8 6 4z' fill='%232e7d32'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1f2622;
+  --ink-soft:#4a554e;
+  --paper:#fbf8f2;
+  --paper-2:#f3ede2;
+  --card:#ffffff;
+  --line:#e2d9c8;
+  --line-strong:#cfc3ac;
+  --brand:#c8431f;
+  --brand-deep:#8f2c12;
+  --leaf:#2e7d32;
+  --leaf-soft:#e4efe2;
+  --gold:#b8860b;
+  --gold-soft:#f7eed6;
+  --radius-s:6px;
+  --radius-m:12px;
+  --radius-l:20px;
+  --shadow-s:0 1px 2px rgba(31,38,34,.08);
+  --shadow-m:0 6px 18px rgba(31,38,34,.09);
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;
+  --space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;
+  --font-sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  --font-serif:"Songti SC","Source Han Serif SC","Noto Serif SC",Georgia,serif;
+  --header-h:64px;
+  --notice-h:38px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:3px}
+h1,h2,h3,h4{line-height:1.35;font-family:var(--font-serif);margin:0}
+p{margin:0 0 var(--space-3)}
+ul,ol{margin:0;padding-left:1.25em}
+
+/* ---------- 吸顶公告 + 页头 ---------- */
+.sticky-shell{
+  position:sticky;top:0;z-index:80;
+  box-shadow:0 2px 10px rgba(31,38,34,.07);
+}
+.notice{
+  background:var(--ink);
+  color:#f3eede;
+  font-size:13px;
+  min-height:var(--notice-h);
+  display:flex;align-items:center;
+}
+.notice .wrap{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--space-4);
+  width:100%;display:flex;align-items:center;gap:var(--space-3);
+  flex-wrap:wrap;line-height:1.5;padding-top:5px;padding-bottom:5px;
+}
+.notice b{color:#ffd9a8;font-weight:600}
+.notice a{color:#ffd9a8;text-decoration:underline}
+.notice .tag{
+  background:var(--brand);color:#fff;font-size:11px;
+  padding:1px 7px;border-radius:99px;letter-spacing:.5px;white-space:nowrap;
+}
+header.site{
+  background:rgba(251,248,242,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--space-4);
+  min-height:var(--header-h);display:flex;align-items:center;gap:var(--space-4);
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand .mark{width:36px;height:36px;flex-shrink:0}
+.brand .bn{font-family:var(--font-serif);font-weight:700;font-size:19px;letter-spacing:.5px;color:var(--ink)}
+.brand .bn small{display:block;font-family:var(--font-sans);font-size:10px;font-weight:400;color:var(--ink-soft);letter-spacing:1.5px}
+nav.main{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+nav.main a{
+  font-size:14px;padding:6px 10px;border-radius:99px;color:var(--ink-soft);
+  white-space:nowrap;
+}
+nav.main a:hover{background:var(--paper-2);color:var(--ink);text-decoration:none}
+nav.main a.on{background:var(--leaf-soft);color:var(--leaf);font-weight:600}
+.hsearch{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.hsearch input{
+  width:150px;padding:7px 10px;font-size:13px;border:1px solid var(--line-strong);
+  border-radius:99px;background:#fff;color:var(--ink);font-family:inherit;
+}
+.hsearch input:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px rgba(200,67,31,.15)}
+.hsearch button{
+  border:none;background:var(--brand);color:#fff;padding:7px 14px;border-radius:99px;
+  font-size:13px;cursor:pointer;font-family:inherit;
+}
+.hsearch button:hover{background:var(--brand-deep)}
+.menu-btn{
+  display:none;margin-left:auto;background:var(--paper-2);border:1px solid var(--line-strong);
+  border-radius:var(--radius-s);padding:7px 10px;cursor:pointer;font-family:inherit;
+  font-size:14px;color:var(--ink);align-items:center;gap:6px;
+}
+.menu-btn svg{width:16px;height:16px}
+#searchStatus{
+  max-width:var(--maxw);margin:0 auto;padding:0 var(--space-4);
+  font-size:13px;color:var(--brand-deep);min-height:0;
+}
+#searchStatus:not(:empty){padding-bottom:8px}
+
+/* 锚点偏移 */
+[id]{scroll-margin-top:calc(var(--header-h) + var(--notice-h) + 14px)}
+
+/* ---------- 通用 ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space-4)}
+.section{padding:var(--space-7) 0}
+.section + .section{border-top:1px solid var(--line)}
+.sec-head{margin-bottom:var(--space-5)}
+.sec-head .kicker{
+  font-size:12px;letter-spacing:2px;color:var(--leaf);font-weight:600;
+  display:inline-block;margin-bottom:4px;
+}
+.sec-head h2{font-size:26px;letter-spacing:.5px}
+.sec-head p{color:var(--ink-soft);font-size:14px;margin-top:6px;max-width:64ch}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(46,125,50,.14), transparent 42%),
+    radial-gradient(circle at 8% 88%, rgba(200,67,31,.12), transparent 40%),
+    linear-gradient(160deg,#fffdf8 0%,#f7f0e2 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-6);
+  align-items:center;padding:var(--space-7) 0;
+}
+.hero-copy .badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1px;
+  background:#fff;border:1px solid var(--line-strong);border-radius:99px;
+  padding:4px 12px;color:var(--ink-soft);margin-bottom:var(--space-4);
+}
+.hero-copy .badge i{width:8px;height:8px;border-radius:50%;background:var(--leaf);display:inline-block}
+.hero h1{
+  font-size:clamp(30px,4.2vw,46px);letter-spacing:1px;color:var(--ink);
+  margin-bottom:var(--space-3);
+}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero .lead{
+  font-size:16px;color:var(--ink-soft);max-width:52ch;margin-bottom:var(--space-4);
+}
+.hero .lead b{color:var(--ink)}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:var(--space-5)}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:99px;font-size:15px;
+  font-family:inherit;cursor:pointer;transition:transform .15s ease;
+  border:1px solid transparent;text-align:center;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn.primary{background:var(--brand);color:#fff}
+.btn.primary:hover{background:var(--brand-deep)}
+.btn.ghost{background:#fff;border-color:var(--line-strong);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--brand);color:var(--brand-deep)}
+.hero-stats{display:flex;gap:var(--space-5);flex-wrap:wrap;border-top:1px solid var(--line);padding-top:var(--space-4)}
+.hero-stats div b{display:block;font-family:var(--font-serif);font-size:24px;color:var(--brand-deep)}
+.hero-stats div span{font-size:12px;color:var(--ink-soft)}
+
+/* 首屏原创视觉：果篮 / 产地数据牌 */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:320px}
+.hero-visual svg{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 14px 26px rgba(31,38,34,.14))}
+.hero-note{
+  position:absolute;bottom:2%;left:0;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-m);padding:10px 14px;box-shadow:var(--shadow-m);
+  font-size:12px;color:var(--ink-soft);max-width:200px;line-height:1.5;
+}
+.hero-note b{color:var(--brand-deep);font-size:13px}
+
+/* ---------- 布局 ---------- */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--space-6);
+  align-items:start;
+}
+.sidebar{position:sticky;top:calc(var(--header-h) + var(--notice-h) + 16px);display:flex;flex-direction:column;gap:var(--space-4)}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s)}
+.side-card h3{font-size:15px;margin-bottom:var(--space-3);color:var(--ink);border-left:3px solid var(--brand);padding-left:8px}
+.side-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.side-card li a{
+  display:block;font-size:13.5px;padding:6px 8px;border-radius:var(--radius-s);
+  color:var(--ink-soft);transition:background .15s;
+}
+.side-card li a:hover,.side-card li a.active{background:var(--leaf-soft);color:var(--leaf);text-decoration:none;font-weight:600}
+.side-card .tiny{font-size:12px;color:var(--ink-soft);line-height:1.6}
+
+/* 通用卡片 */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);box-shadow:var(--shadow-s)}
+.card-pad{padding:var(--space-4) var(--space-5)}
+.chip{
+  display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;
+  background:var(--paper-2);color:var(--ink-soft);border:1px solid var(--line);
+}
+.chip.leaf{background:var(--leaf-soft);color:var(--leaf);border-color:#c9e0c7}
+.chip.gold{background:var(--gold-soft);color:var(--gold);border-color:#ead9ae}
+.chip.brand{background:#fbe6de;color:var(--brand-deep);border-color:#f3c7b8}
+
+/* 概览：三指标卡 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);margin-bottom:var(--space-4)}
+.ov-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s)}
+.ov-card .num{font-family:var(--font-serif);font-size:30px;color:var(--brand-deep);line-height:1.1}
+.ov-card .num span{font-size:14px;color:var(--ink-soft);font-family:var(--font-sans);margin-left:2px}
+.ov-card .lbl{font-size:13px;font-weight:600;margin-top:4px}
+.ov-card .desc{font-size:12.5px;color:var(--ink-soft);line-height:1.6;margin-top:2px}
+.ov-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+.ov-list li{font-size:13.5px;color:var(--ink-soft);padding-left:14px;position:relative;line-height:1.65}
+.ov-list li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.ov-list li b{color:var(--ink)}
+
+/* 精选封面网格 */
+.feature-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--space-4)}
+.f-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-s);transition:transform .18s ease,box-shadow .18s ease}
+.f-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m)}
+.f-card .thumb{aspect-ratio:16/9;overflow:hidden;background:var(--paper-2)}
+.f-card .thumb img{width:100%;height:100%;object-fit:cover}
+.f-card .body{padding:var(--space-4);display:flex;flex-direction:column;gap:6px;flex:1}
+.f-card h3{font-size:17px;line-height:1.4}
+.f-card.big h3{font-size:19px}
+.f-card p{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.65}
+.f-card .meta{font-size:12px;color:var(--ink-soft);margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;padding-top:6px}
+
+/* 时间线：最新更新 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line-strong)}
+.timeline li{position:relative;padding:0 0 var(--space-4) 30px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:1px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--brand)}
+.timeline .when{font-size:12px;color:var(--brand-deep);font-weight:600;letter-spacing:.5px}
+.timeline .what{font-size:14.5px;font-weight:600;margin:1px 0 2px}
+.timeline .how{font-size:13px;color:var(--ink-soft);line-height:1.65}
+.timeline .how b{color:var(--ink)}
+
+/* 分类入口：标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:8px}
+.cat-index a{
+  display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line-strong);
+  border-radius:99px;padding:7px 14px;font-size:13.5px;color:var(--ink);transition:all .15s;
+}
+.cat-index a span{font-size:11px;color:var(--ink-soft)}
+.cat-index a:hover{border-color:var(--brand);color:var(--brand-deep);background:#fdf3ef;text-decoration:none}
+.cat-note{font-size:12.5px;color:var(--ink-soft);margin-top:var(--space-3);line-height:1.7}
+
+/* 深度解析 */
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--space-5) var(--space-5) var(--space-4);box-shadow:var(--shadow-s)}
+.deep > .tag-line{display:flex;align-items:center;gap:10px;margin-bottom:var(--space-3);flex-wrap:wrap}
+.deep h2{font-size:24px;margin-bottom:var(--space-2)}
+.deep .byline{font-size:12.5px;color:var(--ink-soft);margin-bottom:var(--space-4);padding-bottom:var(--space-3);border-bottom:1px dashed var(--line-strong)}
+.deep h3{font-size:17.5px;margin:var(--space-5) 0 var(--space-2);padding-left:10px;border-left:4px solid var(--gold)}
+.deep p{font-size:15px;color:var(--ink);line-height:1.85}
+.deep .verdict{
+  background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:0 var(--radius-m) var(--radius-m) 0;
+  padding:var(--space-4);margin:var(--space-4) 0;font-size:14.5px;
+}
+.deep .verdict b{color:var(--brand-deep)}
+.deep table{width:100%;border-collapse:collapse;font-size:13.5px;margin:var(--space-3) 0}
+.deep table th,.deep table td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+.deep table th{background:var(--paper-2);font-weight:600;color:var(--ink)}
+.deep table td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.deep .split{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin:var(--space-3) 0}
+.deep .panel{border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-3) var(--space-4);background:var(--paper)}
+.deep .panel .pt{font-size:13px;font-weight:700;margin-bottom:2px}
+.deep .panel.fact .pt{color:var(--leaf)}
+.deep .panel.guess .pt{color:var(--gold)}
+.deep .panel ul{padding-left:1.1em;margin:0;font-size:13px;color:var(--ink-soft)}
+.deep .panel li{margin-bottom:3px;line-height:1.65}
+.deep blockquote{margin:var(--space-4) 0;font-family:var(--font-serif);font-size:16px;color:var(--brand-deep);border-left:3px solid var(--brand);padding:4px 0 4px 14px;line-height:1.7}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.step{display:flex;gap:var(--space-3);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s)}
+.step .no{
+  width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--brand);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:17px;font-weight:700;
+}
+.step h3{font-size:15px;margin-bottom:2px}
+.step p{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.65}
+
+/* 榜单 */
+.rank{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;background:#fff}
+.rank-row{display:grid;grid-template-columns:44px 1fr auto;gap:var(--space-3);align-items:center;padding:11px 16px;border-bottom:1px solid var(--line)}
+.rank-row:last-child{border-bottom:none}
+.rank-row .pos{font-family:var(--font-serif);font-size:19px;color:var(--line-strong);font-weight:700;text-align:center}
+.rank-row:nth-child(1) .pos{color:var(--brand)}
+.rank-row:nth-child(2) .pos{color:var(--gold)}
+.rank-row:nth-child(3) .pos{color:var(--leaf)}
+.rank-row .name{font-size:14px;font-weight:600}
+.rank-row .sub{font-size:12px;color:var(--ink-soft);font-weight:400;margin-top:1px}
+.rank-row .val{font-size:12.5px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.rank-note{font-size:12px;color:var(--ink-soft);margin-top:10px;line-height:1.7}
+
+/* FAQ */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);margin-bottom:10px;box-shadow:var(--shadow-s)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:13px 42px 13px 16px;font-size:15px;font-weight:600;
+  position:relative;color:var(--ink);font-family:var(--font-sans);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--brand);font-weight:400;transition:transform .2s;
+}
+.faq details[open] summary::after{content:"−"}
+.faq details[open] summary{border-bottom:1px dashed var(--line)}
+.faq .ans{padding:12px 16px;font-size:13.8px;color:var(--ink-soft);line-height:1.8}
+.faq .ans b{color:var(--ink)}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
+.cmt{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-4);box-shadow:var(--shadow-s);display:flex;flex-direction:column;gap:8px}
+.cmt .who{display:flex;align-items:center;gap:8px}
+.cmt .ava{width:32px;height:32px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
+.cmt .nm{font-size:13.5px;font-weight:600;line-height:1.2}
+.cmt .rl{font-size:11.5px;color:var(--ink-soft)}
+.cmt .txt{font-size:13px;color:var(--ink-soft);line-height:1.7;margin:0}
+.cmt .txt b{color:var(--ink)}
+.cmt .ref{font-size:11.5px;color:var(--brand-deep);background:#fdf3ef;border-radius:var(--radius-s);padding:3px 8px;display:inline-block}
+.cmt.mid .ava{background:var(--gold-soft);color:var(--gold)}
+.cmt.neg .ava{background:#fbe6de;color:var(--brand-deep)}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
+.news-card{display:flex;gap:var(--space-3);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-3);box-shadow:var(--shadow-s)}
+.news-card .nthumb{width:96px;height:96px;flex-shrink:0;border-radius:var(--radius-s);overflow:hidden;background:var(--paper-2)}
+.news-card .nthumb img{width:100%;height:100%;object-fit:cover}
+.news-card h3{font-size:14.5px;line-height:1.45;margin-bottom:3px}
+.news-card p{font-size:12.5px;color:var(--ink-soft);margin:0;line-height:1.6}
+.news-card .nd{font-size:11.5px;color:var(--ink-soft);margin-top:auto;padding-top:6px}
+
+/* 推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rec-tags a{
+  display:inline-block;background:#fff;border:1px solid var(--line-strong);border-radius:var(--radius-s);
+  padding:8px 14px;font-size:13.5px;color:var(--ink);transition:all .15s;
+}
+.rec-tags a::before{content:"#";color:var(--gold);margin-right:4px;font-weight:700}
+.rec-tags a:hover{border-color:var(--brand);background:#fdf3ef;color:var(--brand-deep);text-decoration:none}
+
+/* 引语卡 / 证言 */
+.quotes{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:var(--space-4);align-items:stretch}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-5) var(--space-4);box-shadow:var(--shadow-s);display:flex;flex-direction:column;gap:10px}
+.quote.hi{background:linear-gradient(155deg,#fffdf8,#f7eed6);border-color:#ead9ae}
+.quote .q{font-family:var(--font-serif);font-size:15px;line-height:1.75;color:var(--ink);margin:0}
+.quote .src{font-size:12px;color:var(--ink-soft);margin-top:auto}
+.quote .src b{color:var(--brand-deep)}
+.quote .mark{font-family:var(--font-serif);font-size:40px;line-height:.5;color:var(--gold);opacity:.5}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:20px;bottom:20px;z-index:90;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:none;cursor:pointer;box-shadow:var(--shadow-m);
+  display:none;align-items:center;justify-content:center;font-size:18px;font-family:inherit;
+}
+#toTop.show{display:flex}
+#toTop:hover{background:var(--brand-deep)}
+
+/* 页脚 */
+footer.site{background:#20261f;color:#cfcabb;margin-top:var(--space-6);padding:var(--space-7) 0 var(--space-5);font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:var(--space-5)}
+.foot-brand .bn{font-family:var(--font-serif);font-size:20px;color:#f3eede;font-weight:700;letter-spacing:.5px}
+.foot-brand .pos{margin-top:6px;color:#a9a596;line-height:1.7;max-width:30ch}
+.foot-col h4{font-family:var(--font-sans);font-size:13px;color:#f3eede;letter-spacing:1px;margin:0 0 10px;font-weight:600}
+.foot-col a{display:block;color:#b5b1a3;font-size:13px;padding:3px 0;text-decoration:none}
+.foot-col a:hover{color:#ffd9a8}
+.foot-bottom{border-top:1px solid #3a4038;margin-top:var(--space-5);padding-top:var(--space-4);display:flex;justify-content:space-between;gap:var(--space-4);flex-wrap:wrap;font-size:12px;color:#8f9187}
+.foot-bottom .sample{max-width:60ch;line-height:1.7}
+
+/* 响应式 */
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{position:static;order:2;margin-top:var(--space-5)}
+  .hero-grid{grid-template-columns:1fr;gap:var(--space-4)}
+  .hero-visual{min-height:auto;order:-1}
+  .hero-visual svg{max-width:300px}
+  .hero-note{position:static;margin-top:12px;max-width:none}
+  .overview-grid{grid-template-columns:1fr 1fr}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .feature-grid .f-card.big{grid-column:1/-1}
+  .comments{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (max-width:640px){
+  :root{--space-7:36px;--space-6:24px}
+  .header-inner{flex-wrap:wrap;padding-top:8px;padding-bottom:8px;gap:8px}
+  .menu-btn{display:inline-flex}
+  .hsearch{order:3;width:100%;margin-left:0}
+  .hsearch input{flex:1;width:auto}
+  nav.main{
+    display:none;order:4;width:100%;flex-direction:column;align-items:stretch;
+    margin:4px 0 0;gap:0;border-top:1px solid var(--line);padding-top:6px;
+  }
+  nav.main.open{display:flex}
+  nav.main a{padding:9px 10px;border-radius:var(--radius-s)}
+  .overview-grid{grid-template-columns:1fr}
+  .feature-grid{grid-template-columns:1fr}
+  .ov-list{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .comments{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .deep{padding:var(--space-4)}
+  .deep .split{grid-template-columns:1fr}
+  .rank-row{grid-template-columns:32px 1fr;gap:8px}
+  .rank-row .val{grid-column:2;font-size:11.5px}
+  .hero h1{font-size:28px}
+  #toTop{right:14px;bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.f-card:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶壳：公告条 + 页头 -->
+<div class="sticky-shell">
+  <div class="notice" role="region" aria-label="站内更新公告">
+    <div class="wrap">
+      <span class="tag">更新</span>
+      <span><b>优果网艾小青</b> 产地组 11 月 6 日调价表已上线：赣南脐橙 70–80mm 统货收购价 <b>3.15 元/斤</b>，较 10 月 30 日下调 0.22 元；爱媛 38 号地头价 <b>4.6 元/斤</b> 持稳。</span>
+      <a href="/#latest">查看当日更新 →</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="header-inner">
+      <a class="brand" href="/#" aria-label="优果网艾小青首页">
+        <svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <circle cx="32" cy="38" r="19" fill="#c8431f"/>
+          <circle cx="25" cy="33" r="5" fill="#f0a085" opacity=".55"/>
+          <path d="M32 19c2-8 9-13 16-14-3 8-8 12-16 14z" fill="#2e7d32"/>
+          <path d="M30 20l-4-9 7 5z" fill="#2e7d32"/>
+          <path d="M16 40c4-2 8-2 12 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+        </svg>
+        <span class="bn">优果网艾小青<small>产地选品 · 行情记录</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        菜单
+      </button>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="hsearch" role="search">
+        <input type="search" id="q" placeholder="搜品种、产地、行情" aria-label="站内搜索">
+        <button type="button" id="searchBtn">搜索</button>
+      </div>
+    </div>
+    <div id="searchStatus" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="badge"><i></i>2026 年 11 月 8 日 · 产地运行第 43 周</span>
+        <h1 id="heroTitle"><em>优果网艾小青</em></h1>
+        <p class="lead">一个跟着果商跑产区的内容站：记录<b>品种差异、收购价、冷库周转与档口真实反馈</b>。11 月重点跟的是赣南脐橙、眉山爱媛 38 号、山东秋月梨和广西沃柑早熟批。每周三出价表，周五出复盘。</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="/#deep">读本周深度解析</a>
+          <a class="btn ghost" href="/#latest">看 11 月 6 日调价</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>4</b><span>在跟产区</span></div>
+          <div><b>12</b><span>品类频道</span></div>
+          <div><b>37</b><span>本周报价条目</span></div>
+          <div><b>6</b><span>档口回访</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 340" role="img" aria-label="脐橙与收购单据的构图">
+          <defs>
+            <linearGradient id="basket" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e8dcc4"/><stop offset="1" stop-color="#cbb894"/>
+            </linearGradient>
+            <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f07a35"/><stop offset="1" stop-color="#c8431f"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="200" cy="308" rx="140" ry="16" fill="#1f2622" opacity=".08"/>
+          <rect x="60" y="70" width="150" height="196" rx="10" fill="#fff" stroke="#e2d9c8" stroke-width="2"/>
+          <rect x="76" y="88" width="80" height="9" rx="4" fill="#c8431f" opacity=".85"/>
+          <rect x="76" y="106" width="118" height="6" rx="3" fill="#cfc3ac"/>
+          <rect x="76" y="120" width="100" height="6" rx="3" fill="#cfc3ac"/>
+          <rect x="76" y="134" width="112" height="6" rx="3" fill="#cfc3ac"/>
+          <rect x="76" y="156" width="64" height="6" rx="3" fill="#2e7d32" opacity=".7"/>
+          <rect x="76" y="170" width="104" height="6" rx="3" fill="#cfc3ac"/>
+          <rect x="76" y="192" width="86" height="6" rx="3" fill="#cfc3ac"/>
+          <rect x="76" y="206" width="110" height="6" rx="3" fill="#cfc3ac"/>
+          <rect x="76" y="228" width="52" height="20" rx="6" fill="#e4efe2"/>
+          <text x="86" y="242" font-size="11" fill="#2e7d32" font-family="sans-serif">70-80mm</text>
+          <path d="M150 236 L280 236 L262 300 L168 300 Z" fill="url(#basket)" stroke="#b7a684" stroke-width="2"/>
+          <path d="M162 236 L172 300 M188 236 L192 300 M214 236 L212 300 M240 236 L232 300" stroke="#b7a684" stroke-width="2"/>
+          <circle cx="182" cy="216" r="26" fill="url(#orange)"/>
+          <circle cx="222" cy="222" r="22" fill="url(#orange)"/>
+          <circle cx="248" cy="206" r="19" fill="url(#orange)"/>
+          <circle cx="206" cy="198" r="18" fill="url(#orange)"/>
+          <path d="M182 190c3-8 9-11 15-12-3 7-8 10-15 12z" fill="#2e7d32"/>
+          <path d="M248 188c2-6 6-9 11-10-2 6-6 8-11 10z" fill="#2e7d32"/>
+          <path d="M60 300 L332 300" stroke="#cfc3ac" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="hero-note"><b>11 月 6 日调价</b><br>脐橙统货 3.15 元/斤，比 10 月 30 日低 0.22 元。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 主内容：正文 + 侧栏 -->
+<div class="wrap">
+  <div class="layout">
+
+    <main>
+
+      <!-- 1. 领域概览 -->
+      <section class="section" id="overview" aria-labelledby="ovTitle">
+        <div class="sec-head">
+          <span class="kicker">OVERVIEW</span>
+          <h2 id="ovTitle">领域概览：果商冬季选品要盯的四条线</h2>
+          <p>11 月到次年 1 月，柑橘类集中上市，苹果入库接近尾声，梨和猕猴桃入库转出库。采购关注的不是“什么好吃”，而是收购价、可食率、冷链距离和档口走量四件事。</p>
+        </div>
+        <div class="overview-grid">
+          <div class="ov-card">
+            <div class="num">3.15<span>元/斤</span></div>
+            <div class="lbl">赣南脐橙 70–80mm 统货</div>
+            <div class="desc">11 月 6 日信丰县 5 个收购点均价，较 10 月 30 日 3.37 元下调，主因是集中开园后日上货量翻倍。</div>
+          </div>
+          <div class="ov-card">
+            <div class="num">4.6<span>元/斤</span></div>
+            <div class="lbl">眉山爱媛 38 号地头价</div>
+            <div class="desc">丹棱县张场镇报价，10 月 28 日至今未动。糖度 12.5–13.4 Brix，果径 75–85mm 走货最快。</div>
+          </div>
+          <div class="ov-card">
+            <div class="num">21<span>天</span></div>
+            <div class="lbl">秋月梨冷库周转周期</div>
+            <div class="desc">莱阳 3 号库 10 月出库节奏。出库价 2.8 元/斤，比入库成本加 0.35 元仓储费后仍有余量。</div>
+          </div>
+        </div>
+        <div class="card card-pad">
+          <ul class="ov-list">
+            <li><b>可食率</b>：脐橙 70–80mm 果普遍 62%–66%，同样 3 元收购价，出肉相差 4 个百分点就是 0.12 元/斤。</li>
+            <li><b>冷链半径</b>：信丰到广州 420 公里，常温车 8 小时，损耗约 2.5%；到北京 1800 公里必须预冷。</li>
+            <li><b>档口走量</b>：广州江南市场 11 月 5 日脐橙日均走 42 车，比 10 月底增 11 车。</li>
+            <li><b>替代品</b>：沃柑早熟批 11 月 20 日前后上市，届时脐橙二茬价通常承压 0.1–0.2 元。</li>
+            <li><b>分级口径</b>：同一批果按横径分 65–70、70–80、80–85 三档，价差 0.4–0.9 元/斤不等。</li>
+            <li><b>单据</b>：收购点结算普遍用“净重扣 2% 杂质”，过磅单与自记重量常差 1–3 斤/筐。</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="section" id="featured" aria-labelledby="ftTitle">
+        <div class="sec-head">
+          <span class="kicker">PICKS</span>
+          <h2 id="ftTitle">精选内容推荐：本周值得先读的三篇</h2>
+          <p>按“能不能立刻用上”排序，不是按阅读量。第一篇给了分级口径，第二篇是品种对比，第三篇是采购谈判里的实际让步点。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="f-card big">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/youguo-navel/720/405" width="720" height="405" loading="lazy" alt="赣南脐橙分级台上按横径分档的果筐与卡尺">
+            </div>
+            <div class="body">
+              <span class="chip brand">分级口径</span>
+              <h3>脐橙 70–80mm 这一档，为什么收购点愿意多给 0.4 元</h3>
+              <p>信丰县 3 个收购点的过磅记录显示，70–80mm 档的次果率 6.8%，65–70mm 档是 13.2%。同一棵树，档位差直接决定退货率。</p>
+              <div class="meta"><span>11 月 5 日</span><span>产地组 · 何启明</span></div>
+            </div>
+          </article>
+          <article class="f-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/youguo-ehime/480/270" width="480" height="270" loading="lazy" alt="爱媛 38 号果肉剖面与糖度计读数特写">
+            </div>
+            <div class="body">
+              <span class="chip gold">品种对比</span>
+              <h3>爱媛 38 号和红美人：同价不同货的三个差别</h3>
+              <p>糖度接近时，果皮厚度和剥皮损耗才是差价来源。丹棱县 4 户果农的样本里，红美人可食率高 3.6 个百分点。</p>
+              <div class="meta"><span>11 月 3 日</span></div>
+            </div>
+          </article>
+          <article class="f-card">
+            <div class="thumb">
+              <img src="https://picsum.photos/seed/youguo-market/480/270" width="480" height="270" loading="lazy" alt="水果批发市场档口清晨卸货场景">
+            </div>
+            <div class="body">
+              <span class="chip leaf">采购谈判</span>
+              <h3>档口压价 0.2 元时，采购还能让的三件事</h3>
+              <p>11 月 4 日江南市场两笔成交记录：让步的不是单价，是结算周期、装卸和尾货回收。三条各值 0.05–0.12 元/斤。</p>
+              <div class="meta"><span>11 月 4 日</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section" id="latest" aria-labelledby="ltTitle">
+        <div class="sec-head">
+          <span class="kicker">UPDATES</span>
+          <h2 id="ltTitle">最新更新：11 月 1 日至 11 月 8 日的价格与走货</h2>
+          <p>每条都标了来源地和日期，可回查。价格是收购点或档口的成交口径，不是零售价。</p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <div class="when">11 月 6 日 · 江西信丰</div>
+            <div class="what">脐橙统货收购价下调至 3.15 元/斤</div>
+            <div class="how">安西镇 5 个收购点同步调价，10 月 30 日为 3.37 元。上货量从日均 38 车升至 <b>74 车</b>，收购点开始限收 65–70mm 小果。</div>
+          </li>
+          <li>
+            <div class="when">11 月 5 日 · 广东广州</div>
+            <div class="what">江南市场脐橙日走货 42 车，环比增 11 车</div>
+            <div class="how">档口反馈 70–80mm 箱装走得最快，80–85mm 因单果偏大，商超收货意愿偏低，价差拉到 <b>0.6 元/斤</b>。</div>
+          </li>
+          <li>
+            <div class="when">11 月 4 日 · 四川丹棱</div>
+            <div class="what">爱媛 38 号地头价维持 4.6 元/斤</div>
+            <div class="how">张场镇 3 户果农的成交记录一致。糖度 12.5–13.4 Brix，采果队日工资 <b>260 元/人</b>，人工占成本约 0.5 元/斤。</div>
+          </li>
+          <li>
+            <div class="when">11 月 2 日 · 山东莱阳</div>
+            <div class="what">秋月梨出库价 2.8 元/斤，冷库周转 21 天</div>
+            <div class="how">3 号库 10 月出库记录显示，入库成本 2.45 元、仓储 0.35 元，出库仍有薄利。果面水锈比例 8% 的那批被压到 2.55 元。</div>
+          </li>
+          <li>
+            <div class="when">11 月 1 日 · 广西武鸣</div>
+            <div class="what">沃柑早熟批预计 11 月 20 日前后开园</div>
+            <div class="how">果园测糖 <b>10.8 Brix</b>，尚未到采收线。代办提醒，若脐橙继续跌价，沃柑开秤价可能被压到 3.8 元以下。</div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section" id="channels" aria-labelledby="chTitle">
+        <div class="sec-head">
+          <span class="kicker">CHANNELS</span>
+          <h2 id="chTitle">分类入口：按品种和采购环节找</h2>
+          <p>12 个频道，前 8 个按品类，后 4 个按采购环节。每个频道都持续更新报价与回访记录。</p>
+        </div>
+        <div class="cat-index">
+          <a href="/#overview">赣南脐橙 <span>行情</span></a>
+          <a href="/#featured">眉山爱媛 38 号 <span>品种</span></a>
+          <a href="/#deep">广西沃柑 <span>早熟批</span></a>
+          <a href="/#latest">山东秋月梨 <span>冷库</span></a>
+          <a href="/#guide">陕西红富士 <span>入库</span></a>
+          <a href="/#faq">徐香猕猴桃 <span>后熟</span></a>
+          <a href="/#comments">海南金钻凤梨 <span>反季</span></a>
+          <a href="/#news">云南阳光玫瑰 <span>尾季</span></a>
+          <a href="/#deep">产地收购价 <span>报价</span></a>
+          <a href="/#latest">批发市场走货 <span>档口</span></a>
+          <a href="/#guide">冷链损耗 <span>运输</span></a>
+          <a href="/#faq">分级与过磅 <span>规格</span></a>
+        </div>
+        <p class="cat-note">频道更新频率：报价类每周三，品种评测每月两篇，冷链与分级类按回访节奏走。11 月新增“沃柑早熟批”频道，因为今年开园比去年早 5 天。</p>
+      </section>
+
+      <!-- 5. 深度解析（全页唯一主体阅读区） -->
+      <section class="section" id="deep" aria-labelledby="dpTitle">
+        <div class="deep">
+          <div class="tag-line">
+            <span class="chip brand">深度解析</span>
+            <span class="chip">11 月第 1 周</span>
+          </div>
+          <h2 id="dpTitle">脐橙集中开园后，3.15 元/斤不是底：三个可核对的信号</h2>
+          <p class="byline">数据来源：信丰县安西镇 5 个收购点过磅单、广州江南市场 11 月 5 日到货登记、丹棱县 3 户果农成交记录。口径均为产地交货价，不含包装与运费。</p>
+
+          <p>10 月 30 日到 11 月 6 日，赣南脐橙统货收购价从 3.37 元跌到 3.15 元，一周跌 6.5%。多数人把原因归到“集中上市”，这个解释对，但不够用——集中上市每年都有，跌幅大小取决于三个能查到的信号。</p>
+
+          <h3>信号一：上货量与限收动作同时出现</h3>
+          <p>安西镇 5 个收购点的日上货量，10 月 30 日是 38 车，11 月 6 日是 74 车，接近翻倍。关键不是车多，而是 11 月 4 日起有 3 个点开始限收 65–70mm 小果。限收意味着收购点判断下游不愿接小果，这是价格继续下探的前兆。</p>
+          <div class="verdict"><b>判断：</b>如果 11 月 10 日前限收点从 3 个扩到 5 个，70–80mm 统货大概率跌破 3.0 元/斤。可核对的动作是各点门口的限收告示和过磅单备注栏。</div>
+
+          <h3>信号二：档口大果价差拉大到 0.6 元</h3>
+          <p>广州江南市场 11 月 5 日的到货登记里，70–80mm 箱装主流成交 4.3–4.5 元/斤，80–85mm 只有 3.7–3.9 元/斤。去年同期这个价差是 0.25 元。大果掉价更快，说明商超和社区团购都在收小规格，终端不愿为大果付溢价。</p>
+          <table>
+            <caption style="text-align:left;font-size:12px;color:var(--ink-soft);padding-bottom:4px">江南市场脐橙分规格成交价（元/斤，11 月 5 日）</caption>
+            <thead><tr><th>规格</th><th>成交区间</th><th>较 10 月 29 日</th><th>走货速度</th></tr></thead>
+            <tbody>
+              <tr><td>65–70mm</td><td class="num">3.8–4.0</td><td class="num">−0.35</td><td>慢，限收</td></tr>
+              <tr><td>70–80mm</td><td class="num">4.3–4.5</td><td class="num">−0.20</td><td>快，日清</td></tr>
+              <tr><td>80–85mm</td><td class="num">3.7–3.9</td><td class="num">−0.55</td><td>慢，压货</td></tr>
+            </tbody>
+          </table>
+
+          <h3>信号三：沃柑开秤预期压着二茬价</h3>
+          <p>武鸣沃柑 11 月 1 日测糖 10.8 Brix，还没到采收线，但代办已经在报开秤预期。去年开秤 4.2 元/斤，今年代办口径是 3.8–4.0 元。沃柑提前 5 天开园，意味着脐橙二茬（11 月 15 日前后）要跟沃柑抢同一批采购商。</p>
+
+          <div class="split">
+            <div class="panel fact">
+              <div class="pt">已核实的事实</div>
+              <ul>
+                <li>安西镇 5 点均价 3.15 元/斤（11 月 6 日过磅单）</li>
+                <li>3 个点限收 65–70mm 小果（11 月 4 日起）</li>
+                <li>江南市场大果价差 0.6 元（11 月 5 日登记）</li>
+                <li>沃柑测糖 10.8 Brix（11 月 1 日果园实测）</li>
+              </ul>
+            </div>
+            <div class="panel guess">
+              <div class="pt">仍是推测的部分</div>
+              <ul>
+                <li>限收会否扩散到全部收购点，取决于 11 月 9–10 日到货量</li>
+                <li>沃柑开秤价 3.8 元是代办预期，不是成交价</li>
+                <li>若 11 月中旬寒潮南下，采果节奏被打断，跌幅可能收窄</li>
+              </ul>
+            </div>
+          </div>
+
+          <blockquote>“3.15 不是底，但也别再往下砍——砍过 2.9，果农宁可留树等二茬。”——信丰收购点负责人刘传生在 11 月 6 日过磅现场的原话。</blockquote>
+
+          <p>把三个信号放在一起，能得出一个可被反驳的结论：这轮下跌的主导因素不是产量，是规格错配。70–80mm 走得动、65–70mm 和 80–85mm 两头难卖。如果 11 月 10 日前后限收范围扩大，说明错配在加剧；如果收购点恢复收小果，说明终端补货启动，3.0 元附近就是阶段性底部。判断可以错，但核对点很明确：限收告示数量、江南市场分规格成交价、沃柑开秤实际成交。</p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section" id="guide" aria-labelledby="gdTitle">
+        <div class="sec-head">
+          <span class="kicker">GUIDE</span>
+          <h2 id="gdTitle">体验指南：第一次去产地收货，按这四步走</h2>
+          <p>以信丰脐橙为例。四步都对应具体动作和单据，不是泛泛提醒。</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <div class="no">1</div>
+            <div>
+              <h3>先看收购点告示，再谈价</h3>
+              <p>门口告示写着当日收什么规格、什么价、限不限收。11 月 6 日安西镇 3 个点贴了“限收 65–70mm”，谈价前先确认自己货的横径分布。</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="no">2</div>
+            <div>
+              <h3>过磅单要拍全，含备注栏</h3>
+              <p>净重扣 2% 杂质是常见口径，备注栏会写“青果超 5% 另扣”。同一筐果，自记重量和过磅单常差 1–3 斤，差在筐重和杂质。</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="no">3</div>
+            <div>
+              <h3>抽 3 筐测可食率，别只看糖度</h3>
+              <p>糖度 12.5 Brix 的果，可食率也可能只有 60%。剥 3 筐各 5 个果称皮重，算出肉率，再决定 70–80mm 档能不能加价收。</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="no">4</div>
+            <div>
+              <h3>算清冷链半径再签运单</h3>
+              <p>信丰到广州 420 公里用常温车，损耗约 2.5%；超过 1000 公里要预冷到 4–6℃，运费每吨加 180–240 元。运单上写明温控和到货时限。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 7. 榜单 -->
+      <section class="section" id="rank" aria-labelledby="rkTitle">
+        <div class="sec-head">
+          <span class="kicker">RANKING</span>
+          <h2 id="rkTitle">11 月首周产地收购价榜单（柑橘类）</h2>
+          <p>按统货收购价从高到低排，同价看走货速度。价格取自各产区 11 月 1–6 日成交记录，单位元/斤。</p>
+        </div>
+        <div class="rank">
+          <div class="rank-row"><div class="pos">1</div><div><div class="name">眉山爱媛 38 号</div><div class="sub">丹棱县 · 糖度 12.5–13.4 Brix</div></div><div class="val">4.60</div></div>
+          <div class="rank-row"><div class="pos">2</div><div><div class="name">云南阳光玫瑰（尾季）</div><div class="sub">宾川县 · 串重 600–750g</div></div><div class="val">4.20</div></div>
+          <div class="rank-row"><div class="pos">3</div><div><div class="name">广西沃柑（预期开秤）</div><div class="sub">武鸣区 · 代办预期，非成交</div></div><div class="val">3.90</div></div>
+          <div class="rank-row"><div class="pos">4</div><div><div class="name">赣南脐橙 70–80mm</div><div class="sub">信丰县 · 5 点均价</div></div><div class="val">3.15</div></div>
+          <div class="rank-row"><div class="pos">5</div><div><div class="name">山东秋月梨（出库）</div><div class="sub">莱阳市 · 含仓储成本</div></div><div class="val">2.80</div></div>
+          <div class="rank-row"><div class="pos">6</div><div><div class="name">陕西红富士 80# 以上</div><div class="sub">洛川县 · 入库收尾</div></div><div class="val">2.65</div></div>
+        </div>
+        <p class="rank-note">说明：沃柑一栏是代办预期价，未成交，列出来是为了对照脐橙二茬的竞争关系。秋月梨是出库价，含 0.35 元仓储，不能与地头价直接比。红富士 80# 以上指横径 80mm 起，75# 以下另有 1.9–2.1 元区间。</p>
+      </section>
+
+      <!-- 8. FAQ -->
+      <section class="section" id="faq" aria-labelledby="fqTitle">
+        <div class="sec-head">
+          <span class="kicker">FAQ</span>
+          <h2 id="fqTitle">常见问题：分级、过磅、冷链与开秤</h2>
+          <p>问题来自采购群和档口回访，答案尽量给口径和数字。</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>脐橙 70–80mm 和 80–85mm 差 0.6 元，差在哪？</summary>
+            <div class="ans">差在终端接受度。80–85mm 单果偏大，商超标准箱装不进，社区团购按个卖也嫌大。11 月 5 日江南市场登记里，80–85mm 成交 3.7–3.9 元/斤，70–80mm 是 4.3–4.5 元。收购点因此对大果压价，产地价差被拉到 0.6 元。不是品质差，是规格不对路。</div>
+          </details>
+          <details>
+            <summary>收购点说的“净重扣 2% 杂质”合理吗？</summary>
+            <div class="ans">这是赣南常见口径，2% 对应叶片、果柄和泥杂。问题在备注栏：有的点另写“青果超 5% 另扣”，两项叠加实际扣 4%–5%。核对办法是过磅单备注栏拍照留档，同时抽 3 筐自己称杂质重量。若实际杂质低于 1.5%，可以要求按实测扣。</div>
+          </details>
+          <details>
+            <summary>爱媛 38 号糖度 12.5 Brix 就能收吗？</summary>
+            <div class="ans">糖度只是门槛。丹棱县 4 户果农的样本显示，糖度同为 12.5–13.0 的果，果皮厚度从 1.8mm 到 2.6mm 不等，可食率差 4 个百分点。采购更该看剥皮损耗和化渣度。糖度够但皮厚的果，走商超会被压价 0.3 元/斤左右。</div>
+          </details>
+          <details>
+            <summary>信丰发北京，用常温车行不行？</summary>
+            <div class="ans">1800 公里不建议全程常温。11 月气温低，但车厢内堆高后中心温度会升到 15℃ 以上，脐橙呼吸加快，到货失水明显。常规做法是采后预冷到 4–6℃，用 9.6 米冷藏车，运费比常温车每吨高 180–240 元，损耗能从 6% 压到 2.5% 左右。</div>
+          </details>
+          <details>
+            <summary>沃柑 11 月 20 日开园，现在能订吗？</summary>
+            <div class="ans">可以谈，但别按 3.8 元锁量。武鸣 11 月 1 日测糖 10.8 Brix，离采收线还差一截，早采会影响口感。更稳的做法是签“开园后按当日测糖达标的实际成交价结算”，量先定、价后定。订金比例一般 10%–15%，写清达不到糖度可退。</div>
+          </details>
+          <details>
+            <summary>秋月梨出库价 2.8 元，比入库时贵，算赚钱吗？</summary>
+            <div class="ans">要减去仓储和损耗。莱阳 3 号库的账是：入库成本 2.45 元，仓储 0.35 元，出库 2.8 元，账面持平。但 10 月出库损耗 3%–5%，水锈比例 8% 的那批被压到 2.55 元，实际是亏的。算账要把损耗折进去，不能只看进出差价。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 9. 用户评论 -->
+      <section class="section" id="comments" aria-labelledby="cmTitle">
+        <div class="sec-head">
+          <span class="kicker">VOICES</span>
+          <h2 id="cmTitle">用户评论：采购、代办和果农怎么说</h2>
+          <p>来自采购群、档口回访和产地现场的记录，保留原话口吻。观点不代表站点判断。</p>
+        </div>
+        <div class="comments">
+          <div class="cmt">
+            <div class="who"><div class="ava">陈</div><div><div class="nm">陈立群</div><div class="rl">广州江南市场档口</div></div></div>
+            <p class="txt">70–80mm 这档确实走得动，但 4.3 元已经是让过价的了。上周接的货，箱子压坏两层，扣了 <b>0.15 元/斤</b>。</p>
+            <span class="ref">关于：江南市场分规格成交价</span>
+          </div>
+          <div class="cmt mid">
+            <div class="who"><div class="ava">刘</div><div><div class="nm">刘传生</div><div class="rl">信丰收购点负责人</div></div></div>
+            <p class="txt">限收不是不收，是收了也出不动。小果现在堆在棚里等二茬，果农来问，我也只能劝留树。</p>
+            <span class="ref">关于：安西镇限收 65–70mm</span>
+          </div>
+          <div class="cmt neg">
+            <div class="who"><div class="ava">周</div><div><div class="nm">周敏</div><div class="rl">成都社区团购采购</div></div></div>
+            <p class="txt">爱媛 38 号 4.6 元地头价，加上包装运费到成都快 6 元了，团购价卖不上。这批我跳过，去谈红美人拼柜。</p>
+            <span class="ref">关于：眉山爱媛 38 号地头价</span>
+          </div>
+          <div class="cmt">
+            <div class="who"><div class="ava">王</div><div><div class="nm">王德海</div><div class="rl">莱阳冷库保管</div></div></div>
+            <p class="txt">水锈那批压到 2.55 元我也认，果面确实花。库里剩下 3 万斤，准备 12 月再看出库价。</p>
+            <span class="ref">关于：秋月梨出库价 2.8 元</span>
+          </div>
+          <div class="cmt mid">
+            <div class="who"><div class="ava">韦</div><div><div class="nm">韦海燕</div><div class="rl">武鸣沃柑代办</div></div></div>
+            <p class="txt">3.8 元是我报的预期，不是成交。今年果子小年偏大，果径 60mm 以上多，价格还看开园前那场雨。</p>
+            <span class="ref">关于：沃柑开秤预期价</span>
+          </div>
+          <div class="cmt">
+            <div class="who"><div class="ava">赵</div><div><div class="nm">赵启航</div><div class="rl">陕西洛川果商</div></div></div>
+            <p class="txt">红富士 80# 以上 2.65 元收得动，75# 以下 1.9 元没人要。今年入库量比去年少两成，后面可能涨，但现在不敢囤。</p>
+            <span class="ref">关于：陕西红富士收购价</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关资讯 -->
+      <section class="section" id="news" aria-labelledby="nwTitle">
+        <div class="sec-head">
+          <span class="kicker">NEWS</span>
+          <h2 id="nwTitle">相关资讯：产区、市场与运输</h2>
+          <p>短讯合辑，每条独立成事，不与上面板块重复。</p>
+        </div>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="nthumb"><img src="https://picsum.photos/seed/youguo-orchard/192/192" width="192" height="192" loading="lazy" alt="宾川县阳光玫瑰葡萄园尾季挂果"></div>
+            <div>
+              <h3>云南宾川阳光玫瑰尾季收购 4.2 元</h3>
+              <p>11 月 3 日，宾川县 3 个合作社收尾，串重 600–750g 成交 4.2 元/斤，比 10 月中旬低 0.5 元。冷棚果已基本清园。</p>
+              <div class="nd">11 月 3 日 · 宾川</div>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="nthumb"><img src="https://picsum.photos/seed/youguo-truck/192/192" width="192" height="192" loading="lazy" alt="冷藏车在产地装货，车厢内果筐码放"></div>
+            <div>
+              <h3>信丰到北京冷藏车运费每吨涨 60 元</h3>
+              <p>11 月 5 日询价，9.6 米冷藏车信丰到北京 1.05 万元/车，折每吨约 350 元，比 10 月底涨 60 元，因柑橘集中外发。</p>
+              <div class="nd">11 月 5 日 · 信丰</div>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="nthumb"><img src="https://picsum.photos/seed/youguo-kiwi/192/192" width="192" height="192" loading="lazy" alt="徐香猕猴桃冷库内后熟催熟果筐"></div>
+            <div>
+              <h3>徐香猕猴桃出库转快，后熟期 6–8 天</h3>
+              <p>眉县 2 号库 11 月 4 日出库价 3.6 元/斤，硬度 5.5kg/cm² 的果需后熟 6–8 天。采购方普遍要求到货可售，催熟成本每斤加 0.2 元。</p>
+              <div class="nd">11 月 4 日 · 眉县</div>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="nthumb"><img src="https://picsum.photos/seed/youguo-scale/192/192" width="192" height="192" loading="lazy" alt="收购点电子秤与过磅单据"></div>
+            <div>
+              <h3>丹棱县推广电子过磅单，备注栏可追溯</h3>
+              <p>11 月 2 日起，张场镇 4 个收购点启用电子过磅单，杂质扣比和青果比例直接打印。首周记录显示平均扣比 2.3%。</p>
+              <div class="nd">11 月 2 日 · 丹棱</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 11. 相关推荐 -->
+      <section class="section" id="rec" aria-labelledby="rcTitle">
+        <div class="sec-head">
+          <span class="kicker">MORE</span>
+          <h2 id="rcTitle">相关推荐：按你正在查的词</h2>
+          <p>标签对应站内已有内容，点进去是同主题的报价、评测或指南。</p>
+        </div>
+        <div class="rec-tags">
+          <a href="/#deep">赣南脐橙收购价</a>
+          <a href="/#overview">脐橙可食率测算</a>
+          <a href="/#featured">爱媛 38 号与红美人区别</a>
+          <a href="/#guide">产地过磅扣杂口径</a>
+          <a href="/#latest">江南市场走货速度</a>
+          <a href="/#faq">秋月梨冷库损耗</a>
+          <a href="/#news">沃柑早熟批测糖</a>
+          <a href="/#guide">柑橘冷链预冷温度</a>
+          <a href="/#rank">洛川红富士 80# 价格</a>
+          <a href="/#comments">档口压价让步清单</a>
+          <a href="/#faq">徐香猕猴桃后熟天数</a>
+          <a href="/#news">阳光玫瑰尾季清园</a>
+        </div>
+      </section>
+
+      <!-- 12. 创作者证言 -->
+      <section class="section" id="voices" aria-labelledby="vcTitle">
+        <div class="sec-head">
+          <span class="kicker">FIELD NOTES</span>
+          <h2 id="vcTitle">产地现场的三段话</h2>
+          <p>走访时随手记下的原话，说明判断是怎么来的。</p>
+        </div>
+        <div class="quotes">
+          <div class="quote">
+            <div class="mark">“</div>
+            <p class="q">过磅单我拍了三张，备注栏那行小字比价格重要。</p>
+            <div class="src"><b>何启明</b> · 产地组，11 月 6 日信丰</div>
+          </div>
+          <div class="quote hi">
+            <div class="mark">“</div>
+            <p class="q">别急着说跌到底。看限收告示从 3 个点变几个点，比看行情群里的截图靠谱。11 月 10 日之前，答案就出来了。</p>
+            <div class="src"><b>刘传生</b> · 信丰收购点负责人，11 月 6 日过磅现场</div>
+          </div>
+          <div class="quote">
+            <div class="mark">“</div>
+            <p class="q">爱媛 4.6 元，我算完运费就知道团购做不了。不是果不好，是我的渠道接不住这个价。</p>
+            <div class="src"><b>周敏</b> · 成都社区团购采购，11 月 5 日</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 侧栏：DOM 在主内容之后 -->
+    <aside class="sidebar" aria-label="侧栏导航与提示">
+      <div class="side-card">
+        <h3>频道导航</h3>
+        <ul id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选内容推荐</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#rank">产地收购价榜单</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rec">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>本周报价速览</h3>
+        <ul>
+          <li><a href="/#latest">脐橙 70–80mm · 3.15 元/斤</a></li>
+          <li><a href="/#latest">爱媛 38 号 · 4.60 元/斤</a></li>
+          <li><a href="/#rank">秋月梨出库 · 2.80 元/斤</a></li>
+          <li><a href="/#rank">红富士 80# · 2.65 元/斤</a></li>
+          <li><a href="/#rank">沃柑预期 · 3.90 元/斤</a></li>
+        </ul>
+        <p class="tiny" style="margin-top:10px">报价口径为产地交货或市场成交，不含包装运费。沃柑一栏为代办预期，未成交。</p>
+      </div>
+      <div class="side-card">
+        <h3>更新节奏</h3>
+        <p class="tiny">每周三：产地收购价表。<br>每周五：档口走货复盘。<br>每月两次：品种评测。<br>冷链与分级按回访节奏更新。<br>下次更新：11 月 11 日。</p>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="bn">优果网艾小青</div>
+        <p class="pos">跑产区、记价格的果商内容站，只写能回查的单据和成交。</p>
+      </div>
+      <div class="foot-col">
+        <h4>品种频道</h4>
+        <a href="/#overview">赣南脐橙</a>
+        <a href="/#featured">眉山爱媛 38 号</a>
+        <a href="/#deep">广西沃柑</a>
+        <a href="/#latest">山东秋月梨</a>
+        <a href="/#rank">陕西红富士</a>
+      </div>
+      <div class="foot-col">
+        <h4>采购环节</h4>
+        <a href="/#latest">产地收购价</a>
+        <a href="/#comments">批发市场走货</a>
+        <a href="/#guide">冷链与损耗</a>
+        <a href="/#faq">分级与过磅</a>
+        <a href="/#guide">采后预冷</a>
+      </div>
+      <div class="foot-col">
+        <h4>内容栏目</h4>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="sample" style="margin:0">页面内价格、日期、人名与档口回访均为示例数据，用于演示内容结构；引用前请以实际过磅单和成交记录核对。页面更新时间：2026 年 11 月 8 日，对应正文“最新更新”中 11 月 1–8 日的 5 条记录。</p>
+      <p style="margin:0">© 2026 优果网艾小青 · 产地选品与行情记录</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 本地搜索 */
+  var q = document.getElementById('q');
+  var status = document.getElementById('searchStatus');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var index = sections.map(function(sec){
+    var h2 = sec.querySelector('h2');
+    var title = h2 ? h2.textContent : sec.id;
+    return {id: sec.id, el: sec, title: title, text: sec.textContent.replace(/\s+/g,' ')};
+  });
+
+  function clearMarks(){
+    Array.prototype.forEach.call(document.querySelectorAll('mark[data-search-mark]'), function(m){
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+  }
+
+  function highlight(el, term){
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+    var nodes = [];
+    while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function(node){
+      var idx = node.nodeValue.indexOf(term);
+      if(idx > -1){
+        var span = document.createElement('mark');
+        span.setAttribute('data-search-mark','');
+        span.style.background = '#fbe6de';
+        span.style.color = '#8f2c12';
+        span.textContent = node.nodeValue.substr(idx, term.length);
+        var after = node.splitText(idx);
+        after.nodeValue = after.nodeValue.substr(term.length);
+        node.parentNode.insertBefore(span, after);
+      }
+    });
+  }
+
+  function doSearch(){
+    if(!status || !q) return;
+    var term = q.value.trim();
+    clearMarks();
+    if(term === ''){ status.textContent = ''; return; }
+
+    // 同义词映射
+    var map = {
+      '橙':'脐橙', '脐橙':'脐橙', '爱媛':'爱媛', '果冻橙':'爱媛', '沃柑':'沃柑',
+      '梨':'秋月梨', '苹果':'红富士', '富士':'红富士', '猕猴桃':'猕猴桃',
+      '冷库':'冷库', '冷链':'冷链', '运费':'运费', '过磅':'过磅', '分级':'分级',
+      '价格':'价', '行情':'价', '市场':'市场', '档口':'档口'
+    };
+    var keys = Object.keys(map).filter(function(k){ return term.indexOf(k) > -1; });
+    var terms = [term];
+    keys.forEach(function(k){ if(terms.indexOf(map[k]) < 0) terms.push(map[k]); });
+
+    var hits = index.filter(function(item){
+      return terms.some(function(t){
+        return t && (item.title.indexOf(t) > -1 || item.text.indexOf(t) > -1);
+      });
+    });
+
+    if(hits.length === 0){
+      status.textContent = '没有找到与“' + term + '”相关的内容。可试试：脐橙、爱媛、沃柑、秋月梨、冷链、过磅。';
+      return;
+    }
+    status.textContent = '找到 ' + hits.length + ' 个相关板块：' + hits.map(function(h){ return h.title.split('：')[0]; }).join('、') + '。';
+    var first = hits[0];
+    first.el.scrollIntoView({behavior:'smooth', block:'start'});
+    highlight(first.el, term);
+  }
+
+  var searchBtn = document.getElementById('searchBtn');
+  if(searchBtn) searchBtn.addEventListener('click', doSearch);
+  if(q) q.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 侧栏滚动高亮 + 回到顶部 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var toTop = document.getElementById('toTop');
+
+  var obs = null;
+  if('IntersectionObserver' in window){
+    obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          sideLinks.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href') === '/#' + en.target.id);
+          });
+        }
+      });
+    }, {rootMargin:'-25% 0px -60% 0px', threshold:0});
+    sections.forEach(function(s){ obs.observe(s); });
+  }
+
+  function onScroll(){
+    if(window.scrollY > 500){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "优果网艾小青",
+  "inLanguage": "zh-CN",
+  "description": "水果供应链选品与产地行情记录站点，覆盖赣南脐橙、眉山爱媛38号、广西沃柑、山东秋月梨等品种的收购价、冷链损耗与档口走货。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "脐橙 70–80mm 和 80–85mm 差 0.6 元，差在哪？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "差在终端接受度。80–85mm 单果偏大，商超标准箱装不进，社区团购按个卖也嫌大。11月5日江南市场登记里，80–85mm 成交 3.7–3.9 元/斤，70–80mm 是 4.3–4.5 元。收购点因此对大果压价，产地价差被拉到 0.6 元。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "收购点说的“净重扣 2% 杂质”合理吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "这是赣南常见口径，2% 对应叶片、果柄和泥杂。问题在备注栏：有的点另写“青果超 5% 另扣”，两项叠加实际扣 4%–5%。核对办法是过磅单备注栏拍照留档，同时抽 3 筐自己称杂质重量。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "爱媛 38 号糖度 12.5 Brix 就能收吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "糖度只是门槛。丹棱县 4 户果农的样本显示，糖度同为 12.5–13.0 的果，果皮厚度从 1.8mm 到 2.6mm 不等，可食率差 4 个百分点。采购更该看剥皮损耗和化渣度。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "信丰发北京，用常温车行不行？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1800 公里不建议全程常温。11 月气温低，但车厢内堆高后中心温度会升到 15℃ 以上，脐橙呼吸加快，到货失水明显。常规做法是采后预冷到 4–6℃，用 9.6 米冷藏车。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "沃柑 11 月 20 日开园，现在能订吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以谈，但别按 3.8 元锁量。武鸣 11 月 1 日测糖 10.8 Brix，离采收线还差一截，早采会影响口感。更稳的做法是签“开园后按当日测糖达标的实际成交价结算”。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+    </html>
