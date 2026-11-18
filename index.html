@@ -1,0 +1,1216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>黑兽2动漫免费观看-作品信息与观看指南</title>
+<meta name="description" content="黑兽2动漫免费观看前先辨清版本：整理黑兽2动画的公开信息、各集进度、角色与世界观设定、正版观看渠道差异、常见误传说法，以及观众对作画与节奏的真实评价，附FAQ与相关推荐。">
+<meta name="keywords" content="黑兽2动漫免费观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1a2e'/%3E%3Cpath d='M18 44V20l10 12 10-12v24' stroke='%23e2b04a' stroke-width='4' fill='none' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='24' r='4' fill='%23b8452f'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1c1a2e;
+  --ink-2:#2a2740;
+  --paper:#f5f2ea;
+  --paper-2:#fffdf7;
+  --gold:#c9972f;
+  --gold-soft:#e2b04a;
+  --crimson:#a53a28;
+  --crimson-soft:#c4543d;
+  --muted:#6c6779;
+  --line:#ddd6c6;
+  --line-dark:#3a374f;
+  --shadow:0 2px 10px rgba(28,26,46,.08);
+  --shadow-lg:0 10px 30px rgba(28,26,46,.14);
+  --r:10px;
+  --r-lg:16px;
+  --sp:clamp(14px,2.4vw,22px);
+  --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --serif:"Noto Serif SC","Songti SC",serif;
+  --announce-h:42px;
+  --header-h:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font);line-height:1.85;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.35;margin:0}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin:.25em 0}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ============ 吸顶公告条 + 页头 ============ */
+.stick-wrap{position:sticky;top:0;z-index:50}
+.announce{
+  height:var(--announce-h);display:flex;align-items:center;gap:10px;
+  background:var(--ink);color:#f0e9d8;font-size:13px;
+  padding:0 var(--sp);overflow:hidden;
+}
+.announce .tag{
+  flex:0 0 auto;background:var(--crimson);color:#fff;font-size:11px;
+  padding:1px 7px;border-radius:3px;letter-spacing:.06em;
+}
+.announce b{color:var(--gold-soft);font-weight:600}
+.announce p{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.announce a{color:var(--gold-soft);text-decoration:underline;text-underline-offset:3px}
+
+.site-header{
+  height:var(--header-h);display:flex;align-items:center;gap:18px;
+  background:rgba(245,242,234,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:0 var(--sp);
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand-mark{width:34px;height:34px;flex:0 0 auto}
+.brand-name{font-family:var(--serif);font-weight:700;font-size:18px;letter-spacing:.02em}
+.nav-main{display:flex;gap:4px;flex:1 1 auto;overflow-x:auto;scrollbar-width:none}
+.nav-main::-webkit-scrollbar{display:none}
+.nav-main a{
+  padding:6px 11px;border-radius:6px;font-size:14px;color:var(--ink-2);white-space:nowrap;
+  transition:background .18s,color .18s;
+}
+.nav-main a:hover{background:#e9e3d3;color:var(--ink)}
+.nav-main a.is-active{background:var(--ink);color:#f5f2ea}
+.header-tools{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.search-box{position:relative}
+.search-box input{
+  width:170px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;
+  background:var(--paper-2);font-size:13px;color:var(--ink);
+  transition:width .2s,border-color .2s;
+}
+.search-box input:focus{width:200px;border-color:var(--gold);outline:none}
+.search-hint{
+  position:absolute;right:0;top:calc(100% + 6px);min-width:200px;max-width:280px;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  box-shadow:var(--shadow-lg);padding:8px 10px;font-size:12.5px;color:var(--muted);
+  display:none;z-index:60;
+}
+.search-hint.show{display:block}
+.search-hint strong{color:var(--ink)}
+.menu-btn{
+  display:none;background:var(--paper-2);border:1px solid var(--line);
+  border-radius:8px;padding:7px 11px;font-size:14px;cursor:pointer;color:var(--ink-2);
+}
+.menu-btn:hover{border-color:var(--gold)}
+
+/* ============ 首屏 ============ */
+.hero{
+  position:relative;overflow:hidden;background:var(--ink);color:#f3eddd;
+  border-bottom:4px solid var(--gold);
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:clamp(34px,5vw,64px) var(--sp);
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(20px,4vw,48px);align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;border:1px solid #57517280;
+  border-radius:999px;padding:4px 13px;font-size:12.5px;letter-spacing:.08em;
+  color:var(--gold-soft);margin-bottom:18px;background:#ffffff08;
+}
+.hero h1{
+  font-size:clamp(30px,4.6vw,50px);color:#fbf6e7;letter-spacing:.02em;margin-bottom:14px;
+}
+.hero h1 span{color:var(--gold-soft)}
+.hero-lead{font-size:15.5px;color:#d3cab5;max-width:34em;margin-bottom:24px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;
+  font-size:14.5px;font-weight:600;border:1px solid transparent;
+  transition:transform .18s,background .18s,border-color .18s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--gold);color:#221d0c}
+.btn-primary:hover{background:var(--gold-soft)}
+.btn-ghost{border-color:#6a6480;color:#e6dfcc}
+.btn-ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,34px)}
+.hero-stats div{min-width:82px}
+.hero-stats b{display:block;font-family:var(--serif);font-size:24px;color:var(--gold-soft);line-height:1.2}
+.hero-stats span{font-size:12.5px;color:#a9a28d;letter-spacing:.04em}
+
+/* 首屏原创 SVG 构图 */
+.hero-art{position:relative;aspect-ratio:1/1;max-width:420px;justify-self:center;width:100%}
+.hero-art svg{width:100%;height:100%;display:block}
+.hero-art .ring{transform-origin:center;animation:spin 42s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ============ 主内容框架 ============ */
+.layout{
+  max-width:1180px;margin:0 auto;padding:clamp(28px,4vw,52px) var(--sp);
+  display:grid;grid-template-columns:minmax(0,1fr) 296px;
+  gap:clamp(20px,3vw,38px);align-items:start;
+}
+main{min-width:0}
+aside{min-width:0}
+
+section[id]{scroll-margin-top:calc(var(--announce-h) + var(--header-h) + 14px)}
+
+.block{margin-bottom:clamp(30px,4.4vw,54px)}
+.block-head{margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--ink);display:flex;align-items:baseline;flex-wrap:wrap;gap:10px}
+.block-head h2{font-size:clamp(20px,2.6vw,25px)}
+.block-head .kicker{font-size:12px;letter-spacing:.14em;color:var(--crimson);font-weight:700;text-transform:uppercase}
+.block-head p{margin:0;font-size:13px;color:var(--muted);width:100%}
+
+/* 通用卡片 */
+.card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.card-pad{padding:clamp(14px,2vw,20px)}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--ink-2);margin-bottom:0}
+.meta{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:10px}
+.meta .dot{color:var(--gold)}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{
+  font-size:12px;padding:3px 10px;border-radius:999px;background:#efe9da;
+  color:var(--ink-2);border:1px solid #e2dac6;transition:background .16s,color .16s;
+}
+a.tag:hover{background:var(--ink);color:var(--paper-2);border-color:var(--ink)}
+
+/* 领域概览：非对称组合 */
+.overview-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+.overview-main{grid-row:span 2;display:flex;flex-direction:column;overflow:hidden}
+.overview-main figure{margin:0;aspect-ratio:16/9;overflow:hidden;background:#ded7c5}
+.overview-main img{width:100%;height:100%;object-fit:cover}
+.overview-main .card-pad{flex:1}
+.overview-side{display:grid;gap:14px}
+.mini-stat{
+  display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--paper-2);
+  border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;
+}
+.mini-stat b{font-family:var(--serif);font-size:22px;color:var(--crimson);line-height:1}
+.mini-stat span{font-size:13px;color:var(--ink-2);line-height:1.5}
+
+/* 精选推荐：网格卡片 */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.pick-card{display:flex;flex-direction:column;overflow:hidden}
+.pick-card figure{margin:0;aspect-ratio:16/10;overflow:hidden;background:#ded7c5}
+.pick-card img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.pick-card:hover img{transform:scale(1.04)}
+.pick-card .card-pad{flex:1;display:flex;flex-direction:column}
+.pick-card .card-pad .meta{margin-top:auto;padding-top:10px}
+
+/* 最新更新：紧凑列表 */
+.list-tight{list-style:none;padding:0;margin:0;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.list-tight li{display:flex;gap:14px;padding:13px 16px;border-bottom:1px dashed var(--line);margin:0;transition:background .16s}
+.list-tight li:last-child{border-bottom:none}
+.list-tight li:hover{background:#f8f4e9}
+.list-tight time{flex:0 0 78px;font-size:12.5px;color:var(--crimson);font-weight:700;letter-spacing:.02em;padding-top:2px}
+.list-tight .li-main{min-width:0}
+.list-tight .li-main b{display:block;font-size:14.5px;font-weight:600}
+.list-tight .li-main small{font-size:12.5px;color:var(--muted)}
+.cat-pill{font-size:11px;border:1px solid var(--line);border-radius:3px;padding:0 5px;color:var(--muted);white-space:nowrap}
+
+/* 分类入口：标签索引 + 卡片混合 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.cat-item{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:8px;
+  padding:12px 13px;transition:border-color .16s,background .16s;
+}
+.cat-item:hover{border-color:var(--gold);background:#fbf7ec}
+.cat-item b{display:block;font-size:14.5px;margin-bottom:2px}
+.cat-item span{font-size:12px;color:var(--muted)}
+
+/* 深度解析：分栏正文 + 引语卡 */
+.analysis{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.analysis-head{background:var(--ink);color:#f0e9d8;padding:clamp(16px,2.6vw,24px)}
+.analysis-head h2{font-size:clamp(20px,2.6vw,24px);margin:0 0 6px}
+.analysis-head p{margin:0;font-size:13px;color:#bfb6a0}
+.analysis-body{padding:clamp(16px,2.6vw,26px);columns:1}
+.analysis-body h3{font-size:17.5px;margin:22px 0 8px;padding-left:11px;border-left:4px solid var(--gold)}
+.analysis-body h3:first-child{margin-top:0}
+.analysis-body p{font-size:15px}
+.analysis-body ul{font-size:14.5px}
+.pullquote{
+  border-left:4px solid var(--crimson);background:#f7f1e3;padding:14px 18px;
+  border-radius:0 8px 8px 0;margin:18px 0;font-family:var(--serif);font-size:15.5px;color:var(--ink-2);
+}
+.pullquote cite{display:block;font-size:12.5px;color:var(--muted);font-style:normal;margin-top:6px;font-family:var(--font)}
+.compare-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0 18px;background:#fffdf7}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare-table th{background:#efe9da;font-weight:700;font-size:13px}
+.fact-check{background:#f7f1e3;border:1px dashed var(--gold);border-radius:8px;padding:14px 16px;margin:16px 0;font-size:14px}
+.fact-check b{color:var(--crimson)}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:st}
+.steps li{
+  counter-increment:st;position:relative;padding:14px 16px 14px 58px;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+  margin-bottom:10px;font-size:14.5px;
+}
+.steps li::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:14px;top:13px;
+  width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--gold-soft);
+  font-family:var(--serif);font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.steps li b{display:block;font-size:15px;margin-bottom:2px}
+
+/* 对照面板 */
+.panel-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.panel{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:16px;
+}
+.panel.pro{border-top:4px solid var(--gold)}
+.panel.con{border-top:4px solid var(--crimson)}
+.panel h3{font-size:15.5px;margin-bottom:8px}
+.panel ul{font-size:14px;margin:0;padding-left:1.1em}
+
+/* FAQ */
+details.faq{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+  margin-bottom:10px;overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;list-style:none;padding:13px 42px 13px 16px;position:relative;
+  font-size:15px;font-weight:600;transition:background .16s;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--gold);font-weight:400;line-height:1;
+}
+details.faq[open] summary{background:#f7f1e3}
+details.faq[open] summary::after{content:"–"}
+details.faq .faq-a{padding:0 16px 14px;font-size:14.5px;color:var(--ink-2)}
+
+/* 评论 */
+.comment{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+  padding:14px 16px;margin-bottom:10px;
+}
+.comment header{display:flex;align-items:center;gap:9px;margin-bottom:6px;flex-wrap:wrap}
+.avatar{
+  width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--gold-soft);
+  font-size:13px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);flex:0 0 auto;
+}
+.comment header b{font-size:14px}
+.comment header time{font-size:12px;color:var(--muted);margin-left:auto}
+.comment p{font-size:14.5px;margin:0}
+.comment .quote-inline{color:var(--crimson);font-weight:600}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.news-item{display:flex;gap:12px;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:12px;transition:border-color .16s}
+.news-item:hover{border-color:var(--gold)}
+.news-item .n-date{flex:0 0 46px;text-align:center;border-right:1px solid var(--line);padding-right:10px}
+.news-item .n-date b{display:block;font-family:var(--serif);font-size:19px;color:var(--crimson);line-height:1.1}
+.news-item .n-date span{font-size:11px;color:var(--muted)}
+.news-item .n-body{font-size:13.5px;min-width:0}
+.news-item .n-body b{display:block;font-size:14px;margin-bottom:3px}
+.news-item .n-body small{color:var(--muted);font-size:12.5px}
+
+/* 榜单 / 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 16px 28px;font-size:14px}
+.timeline li::before{
+  content:"";position:absolute;left:1px;top:6px;width:14px;height:14px;border-radius:50%;
+  background:var(--paper);border:3px solid var(--gold);
+}
+.timeline li b{display:block;font-size:14.5px}
+.timeline li span{font-size:12.5px;color:var(--crimson);font-weight:700}
+
+/* 侧栏 */
+.side-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
+  padding:16px;margin-bottom:16px;box-shadow:var(--shadow);
+}
+.side-card h3{font-size:15.5px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.side-nav{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-nav a{
+  display:block;padding:6px 9px;border-radius:6px;border-left:3px solid transparent;
+  color:var(--ink-2);transition:background .16s,border-color .16s,color .16s;
+}
+.side-nav a:hover{background:#f2ecdd}
+.side-nav a.active{background:#efe6cf;border-left-color:var(--crimson);color:var(--ink);font-weight:600}
+.side-list{list-style:none;padding:0;margin:0;font-size:13.5px}
+.side-list li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.side-list li:last-child{border-bottom:none}
+.side-list b{display:block;font-weight:600;font-size:13.5px}
+.side-list small{color:var(--muted);font-size:12px}
+.creator-note{font-size:13.5px;color:var(--ink-2)}
+.creator-note .who{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-weight:600;font-size:13.5px}
+
+/* 页尾 */
+.site-footer{background:var(--ink);color:#c9c1ad;margin-top:20px;border-top:4px solid var(--gold)}
+.footer-inner{max-width:1180px;margin:0 auto;padding:clamp(28px,4vw,44px) var(--sp) 20px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(20px,3vw,40px)}
+.footer-brand .brand-name{color:#f5f2ea;font-size:20px;margin-bottom:10px}
+.footer-brand p{font-size:13.5px;color:#a49c87;max-width:26em}
+.footer-col h4{font-size:14px;color:var(--gold-soft);margin-bottom:10px;letter-spacing:.04em}
+.footer-col ul{list-style:none;padding:0;margin:0;font-size:13.5px}
+.footer-col li{margin:5px 0}
+.footer-col a:hover{color:var(--gold-soft);text-decoration:underline;text-underline-offset:3px}
+.footer-note{font-size:12px;color:#8b8472;line-height:1.7;margin-top:10px}
+.footer-bottom{
+  max-width:1180px;margin:0 auto;padding:14px var(--sp) 26px;border-top:1px solid var(--line-dark);
+  display:flex;flex-wrap:wrap;gap:8px 20px;font-size:12.5px;color:#8b8472;justify-content:space-between;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;z-index:70;width:44px;height:44px;border-radius:50%;
+  background:var(--ink);color:var(--gold-soft);border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s;font-size:18px;
+  box-shadow:var(--shadow-lg);
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+
+/* ============ 响应式 ============ */
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr}
+  aside{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .side-card{margin-bottom:0}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-art{max-width:300px;justify-self:start;margin-top:8px}
+  .grid-3{grid-template-columns:1fr 1fr}
+  .overview-grid{grid-template-columns:1fr}
+  .overview-main{grid-row:auto}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:1/-1}
+}
+@media (max-width:720px){
+  :root{--header-h:58px}
+  .site-header{flex-wrap:wrap;height:auto;min-height:var(--header-h);padding:8px var(--sp);gap:8px}
+  .menu-btn{display:inline-flex;align-items:center}
+  .nav-main{
+    order:5;flex-basis:100%;display:none;flex-direction:column;gap:2px;
+    padding-bottom:8px;max-height:60vh;overflow-y:auto;
+  }
+  .nav-main.open{display:flex}
+  .nav-main a{padding:9px 10px;font-size:14.5px}
+  .header-tools{margin-left:auto}
+  .search-box input{width:120px}
+  .search-box input:focus{width:150px}
+  .grid-3{grid-template-columns:1fr}
+  .panel-compare{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  aside{grid-template-columns:1fr}
+  .list-tight li{flex-wrap:wrap;gap:4px}
+  .list-tight time{flex-basis:auto}
+  .to-top{right:12px;bottom:14px;width:40px;height:40px}
+  .announce p{font-size:12px}
+  .hero-stats{gap:18px}
+  .footer-bottom{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stick-wrap">
+  <div class="announce" role="region" aria-label="站内更新公告">
+    <span class="tag">更新</span>
+    <p><b>2026-11-06</b> 新增《黑兽2》第 4 话“兽潮再临”分镜对照与作画复盘，同日上线 <a href="/#guide">观看渠道核对清单</a> 修订版。</p>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="/#top" aria-label="黑兽2动漫免费观看 首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1c1a2e"/>
+        <path d="M17 45V19l9 12 9-12v26" stroke="#e2b04a" stroke-width="4.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="45" cy="25" r="4.5" fill="#c4543d"/>
+        <path d="M38 40h12" stroke="#6c6779" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">黑兽2动漫免费观看</span>
+    </a>
+    <nav class="nav-main" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">作品概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#updates">更新进度</a>
+      <a href="/#channels">频道分类</a>
+      <a href="/#analysis">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">观众评论</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search-box">
+        <input type="search" id="siteSearch" placeholder="搜条目 / 角色" aria-label="站内搜索" autocomplete="off">
+        <div class="search-hint" id="searchHint" role="status" aria-live="polite"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- ================= 首屏 ================= -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-badge">作品信息站 · 2026 秋季整理</span>
+        <h1 id="heroTitle">黑兽2动漫免费观看<span>：先看清版本与渠道</span></h1>
+        <p class="hero-lead">把“能不能看”“看到哪一版”“哪几集值得回看”拆成可以核对的条目。页面只做信息与观看方法整理，播放入口以持牌平台公告为准。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#guide">查看观看核对清单</a>
+          <a class="btn btn-ghost" href="/#updates">第 4 话更新记录</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>4</b><span>已公开话数</span></div>
+          <div><b>12</b><span>收录频道词</span></div>
+          <div><b>9</b><span>常见误传条目</span></div>
+          <div><b>4</b><span>版本差异点</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" role="img" aria-label="原创几何构图，深色底金色环形与兽形线稿">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+              <stop offset="0%" stop-color="#c9972f" stop-opacity=".34"/>
+              <stop offset="100%" stop-color="#1c1a2e" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="400" rx="24" fill="#221f38"/>
+          <rect width="400" height="400" rx="24" fill="url(#glow)"/>
+          <g class="ring" fill="none" stroke="#e2b04a" stroke-opacity=".5" stroke-width="1.4">
+            <circle cx="200" cy="200" r="150" stroke-dasharray="5 11"/>
+            <circle cx="200" cy="200" r="118" stroke-dasharray="16 9" stroke-opacity=".35"/>
+          </g>
+          <path d="M120 268V150l46 62 40-62v118" fill="none" stroke="#e2b04a" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M132 132c14-24 44-30 62-12 16 16 10 40-8 48-16 7-30-2-34-14" fill="none" stroke="#c4543d" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="188" cy="150" r="5.5" fill="#c4543d"/>
+          <path d="M236 246h88M236 270h60M236 294h74" stroke="#6c6779" stroke-width="5" stroke-linecap="round" stroke-opacity=".7"/>
+          <path d="M258 120l20 20-20 20-20-20z" fill="none" stroke="#e2b04a" stroke-width="2.4"/>
+          <circle cx="258" cy="140" r="3" fill="#e2b04a"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 主体布局 ================= -->
+  <div class="layout">
+
+    <main>
+
+      <!-- ---------- 1 领域概览 ---------- -->
+      <section class="block" id="overview">
+        <div class="block-head">
+          <span class="kicker">01 / 概览</span>
+          <h2>《黑兽2》是什么，处在什么位置</h2>
+          <p>把作品放回系列、类型与播出环境里看，比单看片名更容易判断值不值得追</p>
+        </div>
+        <div class="overview-grid">
+          <article class="card overview-main">
+            <figure>
+              <img src="https://picsum.photos/seed/heishou2-overview/760/428" width="760" height="428" alt="深色调书房场景，一张桌上摊开分镜稿与色卡" loading="lazy">
+            </figure>
+            <div class="card-pad">
+              <h3>暗黑奇幻续作改编，以短篇单元推进叙事</h3>
+              <p>《黑兽2》延续系列设定：大陆边缘的佣兵团体“黑牙”在王国与教团之间周旋，每两话围绕一个委托展开。首话 2026 年 10 月中旬上线，单集 24 分钟，含片头 90 秒与片尾曲 75 秒。制作方在官方账号 10 月 18 日的分镜说明里提到，本季动作戏占比从第一季的约三成降到两成，更多篇幅给到角色对话与阵营交代。</p>
+              <div class="meta">
+                <span>类型：暗黑奇幻 / 佣兵群像</span>
+                <span class="dot">·</span>
+                <span>单集 24 分钟</span>
+                <span class="dot">·</span>
+                <span>话数：已公开 4 话</span>
+              </div>
+              <div class="tag-row">
+                <a class="tag" href="/#channels">黑兽2第4话解析</a>
+                <a class="tag" href="/#channels">黑牙佣兵团设定</a>
+                <a class="tag" href="/#channels">暗黑奇幻短篇动画</a>
+              </div>
+            </div>
+          </article>
+          <div class="overview-side">
+            <div class="mini-stat"><b>2026-10-16</b><span>第 1 话《破城》在持牌平台首播，同日官方频道放出无字幕预告</span></div>
+            <div class="mini-stat"><b>24′00″</b><span>单集标准时长；第 3 话加长 2 分 12 秒，官方在片尾标注为“导演剪辑版”</span></div>
+            <div class="mini-stat"><b>2 条</b><span>目前可核对的官方播出渠道，均需账号登录，不含第三方转载站的公开片源</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- 2 精选内容推荐 ---------- -->
+      <section class="block" id="picks">
+        <div class="block-head">
+          <span class="kicker">02 / 精选</span>
+          <h2>值得先看的六条内容</h2>
+          <p>按“能省下一次踩坑”的标准挑，不按热度排</p>
+        </div>
+        <div class="grid-3">
+          <article class="card pick-card">
+            <figure><img src="https://picsum.photos/seed/heishou2-pick01/560/350" width="560" height="350" alt="雨夜城墙上两个持械人影的剪影" loading="lazy"></figure>
+            <div class="card-pad">
+              <h3>第 4 话分镜逐格对照</h3>
+              <p>官方 11 月 6 日放出的分镜表显示，第 4 话夜袭段共 47 卡，其中 6 卡从原案的一镜到底拆成三镜，理由是“角色转身方向与光源冲突”。</p>
+              <div class="meta"><span>11-06</span><span class="dot">·</span><span>条目复盘</span></div>
+            </div>
+          </article>
+          <article class="card pick-card">
+            <figure><img src="https://picsum.photos/seed/heishou2-pick02/560/350" width="560" height="350" alt="羊皮纸地图上标注的边境要塞位置" loading="lazy"></figure>
+            <div class="card-pad">
+              <h3>黑牙佣兵团三人组设定拆解</h3>
+              <p>把“赏金”“契约”“背叛”三个关键词对应到三集剧情节点，标出哪一集开始角色动机发生偏移。</p>
+              <div class="meta"><span>11-04</span><span class="dot">·</span><span>设定梳理</span></div>
+            </div>
+          </article>
+          <article class="card pick-card">
+            <figure><img src="https://picsum.photos/seed/heishou2-pick03/560/350" width="560" height="350" alt="显示器上并排显示两个版本的同一动画画面" loading="lazy"></figure>
+            <div class="card-pad">
+              <h3>四个版本差异点核对</h3>
+              <p>TV 版、导演剪辑版、平台字幕版与官方预告在片头长度、第 3 话加长段、字幕译名上有差异，逐项列清。</p>
+              <div class="meta"><span>11-02</span><span class="dot">·</span><span>版本对照</span></div>
+            </div>
+          </article>
+          <article class="card pick-card">
+            <figure><img src="https://picsum.photos/seed/heishou2-pick04/560/350" width="560" height="350" alt="笔记本上列出的观看前自检清单" loading="lazy"></figure>
+            <div class="card-pad">
+              <h3>观看前五分钟自检清单</h3>
+              <p>账号是否登录、地区是否匹配、字幕轨是否默认英文，三件事决定你会不会在第二分钟被页内提示打断。</p>
+              <div class="meta"><span>10-30</span><span class="dot">·</span><span>方法</span></div>
+            </div>
+          </article>
+          <article class="card pick-card">
+            <figure><img src="https://picsum.photos/seed/heishou2-pick05/560/350" width="560" height="350" alt="评论区截图形式的文字排版，多条短评并列" loading="lazy"></figure>
+            <div class="card-pad">
+              <h3>第 2 话口碑分歧点在哪</h3>
+              <p>同一集在两条公开评论里被分别称为“节奏最好”和“信息最少”，分歧集中在第 14 分钟的阵营对话。</p>
+              <div class="meta"><span>10-28</span><span class="dot">·</span><span>评论整理</span></div>
+            </div>
+          </article>
+          <article class="card pick-card">
+            <figure><img src="https://picsum.photos/seed/heishou2-pick06/560/350" width="560" height="350" alt="书架上排列同系列前作的实体盒装" loading="lazy"></figure>
+            <div class="card-pad">
+              <h3>没看过第一季能否直接看</h3>
+              <p>第 1 话有 3 处直接引用前作事件，其中 1 处涉及主角旧伤来源，跳过会看不懂第 3 话的一句关键台词。</p>
+              <div class="meta"><span>10-26</span><span class="dot">·</span><span>入门判断</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------- 3 最新更新 ---------- -->
+      <section class="block" id="updates">
+        <div class="block-head">
+          <span class="kicker">03 / 进度</span>
+          <h2>更新与条目变动记录</h2>
+          <p>只记可核对的时间、话数与改动项</p>
+        </div>
+        <ul class="list-tight">
+          <li>
+            <time datetime="2026-11-06">11-06</time>
+            <div class="li-main">
+              <b>第 4 话分镜对照上线 <span class="cat-pill">解析</span></b>
+              <small>47 卡清单 + 6 处拆镜说明，来源为制作方官方账号发布的分镜说明图。</small>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-11-05">11-05</time>
+            <div class="li-main">
+              <b>第 4 话《兽潮再临》播出 <span class="cat-pill">正片</span></b>
+              <small>片长 24 分 08 秒，片尾曲后无追加段落；官网话数表同步从 3 更新为 4。</small>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-11-02">11-02</time>
+            <div class="li-main">
+              <b>版本差异核对表修订至第 2 版 <span class="cat-pill">修订</span></b>
+              <small>新增第 3 话“导演剪辑版”加长段落的起止时间点，修正此前误标的一处字幕轨。</small>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-30">10-30</time>
+            <div class="li-main">
+              <b>观看前自检清单发布 <span class="cat-pill">方法</span></b>
+              <small>列出账号、地区、字幕三项前置条件，附两条常见报错提示的处理方向。</small>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-28">10-28</time>
+            <div class="li-main">
+              <b>第 2 话评论分歧整理 <span class="cat-pill">评论</span></b>
+              <small>收录 6 条公开评论，其中 4 条指向第 14 分钟阵营对话的具体台词。</small>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-10-22">10-22</time>
+            <div class="li-main">
+              <b>频道词表从 9 个扩到 12 个 <span class="cat-pill">站务</span></b>
+              <small>新增“黑兽2更新时间表”“黑兽2角色关系图”“黑兽2片尾曲信息”三个检索词。</small>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ---------- 4 分类入口 ---------- -->
+      <section class="block" id="channels">
+        <div class="block-head">
+          <span class="kicker">04 / 频道</span>
+          <h2>按你实际想找的东西分类</h2>
+          <p>十二个频道词，全部对应该页已有或将要补充的条目</p>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#updates"><b>黑兽2更新时间表</b><span>4 话排期与加长版标注</span></a>
+          <a class="cat-item" href="/#analysis"><b>黑兽2第4话解析</b><span>夜袭段分镜与拆镜理由</span></a>
+          <a class="cat-item" href="/#guide"><b>黑兽2正版观看渠道</b><span>登录、地区、字幕前置条件</span></a>
+          <a class="cat-item" href="/#analysis"><b>黑兽2角色关系图</b><span>三方阵营与契约关系</span></a>
+          <a class="cat-item" href="/#faq"><b>黑兽2导演剪辑版差异</b><span>第 3 话加长段起止点</span></a>
+          <a class="cat-item" href="/#faq"><b>黑兽2片尾曲信息</b><span>曲名、演唱与版本说明</span></a>
+          <a class="cat-item" href="/#comments"><b>黑兽2口碑评价</b><span>作画、节奏的两种说法</span></a>
+          <a class="cat-item" href="/#picks"><b>黑牙佣兵团设定</b><span>三人组与委托机制</span></a>
+          <a class="cat-item" href="/#guide"><b>黑兽2没看第一季</b><span>3 处前作引用定位</span></a>
+          <a class="cat-item" href="/#news"><b>黑兽2相关资讯</b><span>官方账号与站点动态</span></a>
+          <a class="cat-item" href="/#detail"><b>黑兽2作画复盘</b><span>动作戏占比变化</span></a>
+          <a class="cat-item" href="/#comments"><b>黑兽2第2话争议</b><span>第 14 分钟对话分歧</span></a>
+        </div>
+      </section>
+
+      <!-- ---------- 5 深度解析（唯一主体阅读区） ---------- -->
+      <section class="block" id="analysis">
+        <article class="analysis">
+          <div class="analysis-head">
+            <h2>深度解析：把“免费观看”当成检索词，会挑错版本</h2>
+            <p>判断附带可核对的时间线、话数与说法差异，便于反对或引用</p>
+          </div>
+          <div class="analysis-body">
+
+            <h3>判断一：第 3 话的“导演剪辑版”是本季唯一的实质版本差异</h3>
+            <p>第 3 话《灰烬契约》在持牌平台上线时标注为“导演剪辑版”，片长 26 分 12 秒；同一话在官方预告与部分平台的字幕轨说明里仍按 24 分记。对照 10 月 25 日官方账号发布的加长说明，新增的 2 分 12 秒集中在两处：一是主角与教团代表在走廊的对话，约 1 分 05 秒；二是片尾曲前的佣兵团列队镜头，约 1 分 07 秒。前一处补完了“契约代价”的台词，后一处只影响画面。</p>
+            <p>第 1、2、4 话目前没有同类标注。也就是说，追更时若看到某处写着“第 3 话为什么比别人长”，答案不是排期失误，而是版本不同。把这一点当成“平台私自加料”的传言，在 10 月 27 日的两条转发里出现过，官方没有单独回应。</p>
+
+            <div class="pullquote">
+              “加长的那段对话，把主角上一集为什么放走俘虏讲清楚了；不看这段，第 4 话开头他挨的那一拳会显得没头没尾。”
+              <cite>—— 10 月 26 日某公开评论区的高赞留言，原句有删节</cite>
+            </div>
+
+            <h3>判断二：第 4 话动作戏变多，但信息密度反而下降</h3>
+            <p>统计四话的分镜卡数：第 1 话 312 卡、第 2 话 287 卡、第 3 话 341 卡（含加长段）、第 4 话 305 卡。第 4 话夜袭段 47 卡里有 19 卡是纯动作衔接，没有台词；对比第 2 话同长度的城门口冲突段，47 卡中有 12 卡无台词。动作卡变多不等于叙事更紧，因为第 4 话把三方阵营的立场交代压缩到了两句台词里，分别是“黑牙不替教团收尸”和“王国欠我们的还没结”。</p>
+            <p>这个判断可以被反驳：若把“信息”只算作剧情推进事件，第 4 话推进了两件事（兽潮逼近、教团换帅），并不比前几话少。分歧点在于是否把阵营立场视作需要展开的信息。下面这张表把两种算法的差别摆出来，读者可自行核对。</p>
+
+            <table class="compare-table">
+              <caption style="caption-side:top;text-align:left;font-size:12.5px;color:#6c6779;padding-bottom:6px">四话分镜与信息条目对照（数据来源：官方分镜说明图，2026-10-16 至 11-06）</caption>
+              <thead>
+                <tr><th>话数</th><th>分镜卡数</th><th>无台词动作卡</th><th>阵营立场台词</th><th>版本标注</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>第 1 话</td><td>312</td><td>21</td><td>4 句</td><td>TV 版</td></tr>
+                <tr><td>第 2 话</td><td>287</td><td>12</td><td>6 句</td><td>TV 版</td></tr>
+                <tr><td>第 3 话</td><td>341</td><td>15</td><td>9 句</td><td>导演剪辑版</td></tr>
+                <tr><td>第 4 话</td><td>305</td><td>19</td><td>2 句</td><td>TV 版</td></tr>
+              </tbody>
+            </table>
+
+            <h3>判断三：“免费观看”检索结果里，多数条目并非正片</h3>
+            <p>以“黑兽2动漫免费观看”为词在公开搜索引擎检索，首页结果大致可分为四类：官方或持牌平台的节目页、聚合站的标题页、短视频平台的切片搬运、以及论坛帖。真正能点开播正片的，通常需要账号登录且地区匹配；标题页往往只有简介和一张海报；切片搬运多是 30 秒到 3 分钟的片段，第 4 话夜袭段被切得最多。</p>
+            <p>可核对的做法：点开结果后看三处——有没有“第 X 话”的完整分集列表、有没有播放进度条、页面底部有没有版权说明。三者缺一，基本可以判断不是可完整观看的节目页。这个检查方法在 11 月 2 日的版本核对表第 2 版里也写过，属于可复现的流程，不依赖个人经验。</p>
+
+            <div class="fact-check">
+              <b>事实、回应、转述、推测分开记：</b><br>
+              事实：第 3 话标注“导演剪辑版”，片长 26 分 12 秒（官方节目页，10-25 更新）。<br>
+              回应：官方账号 10-25 发布加长说明，列出两处新增段落时长。<br>
+              转述：10-27 有两条转发称“平台私自加料”，未见官方单独回应。<br>
+              推测：若后续话数沿用同一标注习惯，第 6 话可能出现第二次加长——目前无任何来源支持，仅作观察项。
+            </div>
+
+            <h3>判断四：没看第一季的人，第 3 话会卡住</h3>
+            <p>第 1 话有 3 处直接引用前作：主角左臂旧伤的来源（约第 7 分钟）、黑牙与王国的旧契约（约第 13 分钟）、教团审判官的登场（约第 19 分钟）。其中第 1 处和第 3 话走廊对话直接相关——那段新增台词里出现了“上一次在灰堡”的措辞，而灰堡事件只在前作出现。跳过前作的人，能看懂当下冲突，但会漏掉角色为何让步的动机层。</p>
+            <p>如果只想快速补齐，按信息量排序：先看前作第 8 话（灰堡事件）、再看本季第 3 话加长段、最后回看本季第 1 话第 19 分钟。这个顺序的依据是信息依赖关系，不是推荐观看顺序，两者不要混用。</p>
+
+            <h3>判断五：片尾曲信息有两个版本，字幕轨不同会看到不同署名</h3>
+            <p>第 1 话片尾曲署名为主唱 A，第 2 话起片尾曲未换，但平台字幕轨 1 显示“演唱：A”，字幕轨 2 显示“演唱：A &amp; B”。差别来自 10 月 20 日官方发布的合唱版说明，说明里写“第 2 话起片尾使用合唱版音源”。两条字幕轨都没有明显错误，只是对应不同音源。若在评论里看到“片尾曲换人了”的说法，先确认对方看的是哪条字幕轨。</p>
+
+            <p style="font-size:13.5px;color:#6c6779">以上五个判断都附了可核对的中段：时间点、卡数、片长或署名差异。若后续官方发布新的分镜说明，第 2、3 条判断的数字需要同步更新。</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ---------- 6 体验指南 ---------- -->
+      <section class="block" id="guide">
+        <div class="block-head">
+          <span class="kicker">06 / 指南</span>
+          <h2>想顺利看完一集，按这五步走</h2>
+          <p>每一步都对应一个可能卡住的环节</p>
+        </div>
+        <ol class="steps">
+          <li><b>先确认你要看的是哪一话、哪一版</b>第 3 话有导演剪辑版，片长 26 分 12 秒；其余话数为 24 分钟上下。节目页的分集列表会标注版本，先看标注再点播放。</li>
+          <li><b>检查账号与地区是否匹配</b>持牌平台均要求登录，部分节目页对地区有限制。若页面显示“当前地区不可用”，换渠道比反复刷新更有效，官方公告里通常写明可用区域。</li>
+          <li><b>把字幕轨切到中文</b>默认轨不一定是中文。第 2 话起片尾曲有合唱版音源，字幕轨 1 与轨 2 的署名不同，选错轨会以为片尾换人。</li>
+          <li><b>遇到标题页先看三处</b>完整分集列表、播放进度条、版权说明。三者缺一，多半不是可完整观看的节目页，别在页内广告上花时间。</li>
+          <li><b>看完再决定要不要补前作</b>只补前作第 8 话（灰堡事件）即可理解第 3 话加长段的动机层；按本季第 3 话、第 1 话第 19 分钟的顺序回看，效率更高。</li>
+        </ol>
+      </section>
+
+      <!-- ---------- 7 对照面板 ---------- -->
+      <section class="block" id="detail">
+        <div class="block-head">
+          <span class="kicker">07 / 复盘</span>
+          <h2>作画与节奏：两种看法摆在一起</h2>
+          <p>同一条目，支持与保留意见各列三条，均指向具体话数</p>
+        </div>
+        <div class="panel-compare">
+          <div class="panel pro">
+            <h3>认为第 4 话是当前最好一集</h3>
+            <ul>
+              <li>夜袭段 47 卡里 19 卡纯动作，镜头切换集中在 3 秒以内，压迫感来自剪辑而非台词。</li>
+              <li>兽潮逼近的远景用了三层景深，第 4 话第 9 分钟与第 18 分钟各出现一次，前后呼应。</li>
+              <li>教团换帅只用两句台词交代，省下的时长给了城墙防守的群像调度。</li>
+            </ul>
+          </div>
+          <div class="panel con">
+            <h3>认为第 4 话信息量反而变少</h3>
+            <ul>
+              <li>阵营立场台词从第 3 话的 9 句降到 2 句，新观众难以判断教团为何突然换帅。</li>
+              <li>19 卡无台词动作卡里，有 7 卡是同一姿势的不同角度，可压缩。</li>
+              <li>第 4 话没有回收第 3 话加长段埋下的“契约代价”，动机线断了半集。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mini-stat" style="margin-top:12px">
+          <b>305</b><span>第 4 话分镜卡数；对比第 3 话 341 卡（含加长段），少 36 卡，但单卡平均时长略长</span>
+        </div>
+      </section>
+
+      <!-- ---------- 8 FAQ ---------- -->
+      <section class="block" id="faq">
+        <div class="block-head">
+          <span class="kicker">08 / 问答</span>
+          <h2>常见问题</h2>
+          <p>答案尽量给条件与位置，不给“可以”“不行”的空结论</p>
+        </div>
+
+        <details class="faq" open>
+          <summary>黑兽2目前一共更新了几话？</summary>
+          <div class="faq-a">截至 2026 年 11 月 6 日，已公开 4 话，依次为《破城》《灰烬契约》《导演剪辑版加长》《兽潮再临》。第 3 话片长 26 分 12 秒，其余三话在 24 分钟左右。官网话数表与节目页分集列表同步，二者不一致时以节目页为准。</div>
+        </details>
+        <details class="faq">
+          <summary>第 3 话的导演剪辑版和普通版差在哪？</summary>
+          <div class="faq-a">差 2 分 12 秒，集中在两处：主角与教团代表在走廊的对话约 1 分 05 秒，片尾曲前佣兵团列队镜头约 1 分 07 秒。前一处补完“契约代价”的台词，后一处只影响画面。官方 10 月 25 日的加长说明列出了这两段。</div>
+        </details>
+        <details class="faq">
+          <summary>没看过第一季，直接看第 1 话会不会看不懂？</summary>
+          <div class="faq-a">第 1 话有 3 处直接引用前作，位置分别在第 7 分钟、第 13 分钟和第 19 分钟。跳过前作能看懂当下冲突，但第 3 话走廊对话里出现“上一次在灰堡”的措辞时，会不清楚角色为何让步。只想补齐的话，看前作第 8 话即可。</div>
+        </details>
+        <details class="faq">
+          <summary>片尾曲换人了吗？</summary>
+          <div class="faq-a">没有换曲。第 2 话起片尾使用合唱版音源，官方 10 月 20 日的说明写明了这一点。平台字幕轨 1 显示“演唱：A”，字幕轨 2 显示“演唱：A &amp; B”，差别来自字幕轨对应的音源不同，不是版本错误。</div>
+        </details>
+        <details class="faq">
+          <summary>哪些页面是真正能播完整一集的？</summary>
+          <div class="faq-a">看三处：有没有完整的第 1 至第 4 话分集列表、有没有播放进度条、页面底部有没有版权说明。三者齐全的通常是持牌平台节目页，需登录且地区匹配。只有海报表与简介的标题页、只放 30 秒到 3 分钟片段的搬运页，都不能完整观看。</div>
+        </details>
+        <details class="faq">
+          <summary>第 2 话第 14 分钟那段对话为什么有争议？</summary>
+          <div class="faq-a">那段对话里，黑牙成员对是否接受教团委派给出了相反意见，台词只有四句，没有明确谁占上风。有评论认为这是刻意留白，也有评论认为信息不足、影响后续理解。分歧点集中在这四句台词是否足以支撑角色在第 4 话的选择。</div>
+        </details>
+        <details class="faq">
+          <summary>黑牙佣兵团的委托机制是怎么设定的？</summary>
+          <div class="faq-a">按已公开的话数看，委托分三类：王国军方的清剿委托、教团的护送委托、以及村镇自发的悬赏。三类在结算方式上不同——军方按人头结算，教团按契约节点结算，村镇悬赏以实物抵付。第 2 话和第 4 话各出现一次结算场景。</div>
+        </details>
+      </section>
+
+      <!-- ---------- 9 用户评论 ---------- -->
+      <section class="block" id="comments">
+        <div class="block-head">
+          <span class="kicker">09 / 评论</span>
+          <h2>观众怎么说</h2>
+          <p>保留不同语气，包括指向具体条目的吐槽；昵称与时间为示例整理</p>
+        </div>
+
+        <article class="comment">
+          <header><span class="avatar">岑</span><b>岑野</b><time datetime="2026-11-06">11-06 21:40</time></header>
+          <p><span class="quote-inline">第 4 话夜袭段</span>的剪辑确实利落，但城墙防守那几个远景切得太快，我暂停了两次才看清是谁在指挥。动作戏好看归好看，群像调度还是第 2 话城门口那段更清楚。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">林</span><b>林间道</b><time datetime="2026-11-05">11-05 23:12</time></header>
+          <p>第 3 话加长的那段对话，把主角上一集为什么放走俘虏讲清楚了。之前看普通版一直觉得这段动机缺一块，补上之后第 4 话开头挨的那一拳就有来处了。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">周</span><b>周末补番</b><time datetime="2026-11-05">11-05 18:03</time></header>
+          <p>说句不客气的，<span class="quote-inline">第 2 话第 14 分钟</span>那四句台词真的不够用。两边各说一句就切走，后面第 4 话角色突然倒向教团，我往回翻了两次才勉强接上。留白可以，但不能留成断点。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">沈</span><b>沈砚舟</b><time datetime="2026-11-03">11-03 10:27</time></header>
+          <p>片尾曲那个事我一开始也以为换人了，后来把字幕轨切到轨 2 才看到是合唱版署名。平台默认轨不是中文，第一次看的人很容易被这个误导，建议先检查字幕设置。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">许</span><b>许半页</b><time datetime="2026-11-02">11-02 15:55</time></header>
+          <p>我是从第 4 话开始看的，完全没看过第一季。能看懂打斗，但教团为什么突然换帅、黑牙为什么不愿意收尸，这两处都是靠猜。后来补了前作第 8 话，灰堡那件事一出来，很多对话才顺。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">方</span><b>方寸山</b><time datetime="2026-10-31">10-31 09:18</time></header>
+          <p>整体节奏我挺满意，就是<span class="quote-inline">第 4 话</span>有点用力过猛，19 卡无台词动作里至少 7 卡是同一个姿势换角度。不是不能看，是看的时候会走神，尤其第二遍。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">顾</span><b>顾与之</b><time datetime="2026-10-29">10-29 20:44</time></header>
+          <p>中评吧。作画稳定，没有明显崩坏集，但也没到能单独拿出来说的程度。第 1 话第 19 分钟审判官登场那场，光源处理倒是很干净，属于容易被忽略但做得不错的部分。</p>
+        </article>
+      </section>
+
+      <!-- ---------- 10 相关资讯 ---------- -->
+      <section class="block" id="news">
+        <div class="block-head">
+          <span class="kicker">10 / 资讯</span>
+          <h2>相关资讯与站点动态</h2>
+          <p>每条给出时间、来源与一句话要点</p>
+        </div>
+        <div class="news-grid">
+          <div class="news-item">
+            <div class="n-date"><b>06</b><span>11月</span></div>
+            <div class="n-body"><b>分镜说明图发布</b><small>制作方官方账号发布第 4 话 47 卡对照，说明 6 处拆镜理由。</small></div>
+          </div>
+          <div class="news-item">
+            <div class="n-date"><b>05</b><span>11月</span></div>
+            <div class="n-body"><b>第 4 话正片上线</b><small>持牌平台节目页分集列表更新至 4 话，片长 24 分 08 秒。</small></div>
+          </div>
+          <div class="news-item">
+            <div class="n-date"><b>02</b><span>11月</span></div>
+            <div class="n-body"><b>版本核对表第 2 版</b><small>新增第 3 话加长段起止时间点，修正一处字幕轨标注。</small></div>
+          </div>
+          <div class="news-item">
+            <div class="n-date"><b>30</b><span>10月</span></div>
+            <div class="n-body"><b>观看自检清单发布</b><small>账号、地区、字幕三项前置条件，附两条常见报错的处理方向。</small></div>
+          </div>
+          <div class="news-item">
+            <div class="n-date"><b>25</b><span>10月</span></div>
+            <div class="n-body"><b>第 3 话加长说明</b><small>官方账号列出两处新增段落及各自时长，总加长 2 分 12 秒。</small></div>
+          </div>
+          <div class="news-item">
+            <div class="n-date"><b>20</b><span>10月</span></div>
+            <div class="n-body"><b>片尾合唱版说明</b><small>第 2 话起片尾使用合唱版音源，与字幕轨署名差异相关。</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- 11 相关推荐 ---------- -->
+      <section class="block" id="related">
+        <div class="block-head">
+          <span class="kicker">11 / 推荐</span>
+          <h2>相关推荐</h2>
+          <p>按你接下来最可能查的词排列</p>
+        </div>
+        <div class="tag-row" style="gap:10px">
+          <a class="tag" href="/#analysis">黑兽2第4话分镜对照</a>
+          <a class="tag" href="/#analysis">黑牙佣兵团三方阵营</a>
+          <a class="tag" href="/#guide">黑兽2正版观看前置条件</a>
+          <a class="tag" href="/#faq">黑兽2第3话加长段位置</a>
+          <a class="tag" href="/#comments">黑兽2第2话台词争议</a>
+          <a class="tag" href="/#faq">黑兽2片尾曲合唱版</a>
+          <a class="tag" href="/#guide">黑兽2没看第一季补番顺序</a>
+          <a class="tag" href="/#picks">黑兽2第4话夜袭段</a>
+          <a class="tag" href="/#detail">黑兽2作画崩坏核对</a>
+          <a class="tag" href="/#updates">黑兽2更新时间表</a>
+          <a class="tag" href="/#faq">黑兽2角色关系图</a>
+          <a class="tag" href="/#news">黑兽2官方动态</a>
+        </div>
+      </section>
+
+      <!-- ---------- 12 补充：时间线 ---------- -->
+      <section class="block" id="timeline">
+        <div class="block-head">
+          <span class="kicker">12 / 时间线</span>
+          <h2>从首播到第 4 话的二十天</h2>
+          <p>只记有公开来源的时间点</p>
+        </div>
+        <ul class="timeline">
+          <li><span>2026-10-16</span><b>第 1 话《破城》首播</b>片长 24 分 02 秒，同日官方频道放出无字幕预告。</li>
+          <li><span>2026-10-18</span><b>分镜说明首次公开</b>官方账号提到本季动作戏占比从第一季约三成降到两成。</li>
+          <li><span>2026-10-23</span><b>第 2 话《灰烬契约》播出</b>片尾曲沿用，字幕轨 1 与轨 2 署名差异在此话开始出现。</li>
+          <li><span>2026-10-25</span><b>第 3 话加长说明</b>两处新增段落共 2 分 12 秒，官方列出各自起止点。</li>
+          <li><span>2026-10-30</span><b>第 3 话《导演剪辑版加长》上线</b>片长 26 分 12 秒，节目页标注版本名。</li>
+          <li><span>2026-11-05</span><b>第 4 话《兽潮再临》播出</b>片长 24 分 08 秒，夜袭段 47 卡。</li>
+          <li><span>2026-11-06</span><b>第 4 话分镜对照发布</b>6 处拆镜理由与光源冲突有关。</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- ================= 侧栏 ================= -->
+    <aside aria-label="侧栏导航与辅助信息">
+      <div class="side-card">
+        <h3>栏目导航</h3>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">作品概览</a></li>
+          <li><a href="/#picks">精选推荐</a></li>
+          <li><a href="/#updates">更新记录</a></li>
+          <li><a href="/#channels">频道分类</a></li>
+          <li><a href="/#analysis">深度解析</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#detail">作画复盘</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#timeline">时间线</a></li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>本周被查最多的条目</h3>
+        <ul class="side-list">
+          <li><b>第 3 话加长段</b><small>10-25 官方说明 · 2 分 12 秒</small></li>
+          <li><b>第 4 话夜袭段</b><small>11-06 分镜对照 · 47 卡</small></li>
+          <li><b>片尾曲合唱版</b><small>10-20 音源说明 · 轨 1 / 轨 2</small></li>
+          <li><b>黑牙三方阵营</b><small>第 2 话结算场景 · 第 4 话换帅</small></li>
+          <li><b>补番顺序</b><small>前作第 8 话 → 第 3 话加长段</small></li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>整理者的话</h3>
+        <div class="creator-note">
+          <div class="who"><span class="avatar">简</span>简野 · 动画条目整理</div>
+          <p style="margin:0">四话的分镜卡数、片长、字幕轨署名都逐条对过官方节目页与官方账号。第 2 话第 14 分钟的争议没有给定论，只标了两种说法各自指向的台词位置。后续若出现第 5 话，先补排期表再补解析。</p>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- ================= 页尾 ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-name">黑兽2动漫免费观看</div>
+      <p>把一部短篇暗黑奇幻动画的版本、话数、渠道与争议点摊开写清楚，让人少花时间在标题页和切片上。页面不含播放器，播放入口以持牌平台公告为准。</p>
+      <p class="footer-note">站内条目与时间为示例整理，用于展示信息组织方式；涉及渠道与版权的信息请以官方发布为准。</p>
+    </div>
+    <div class="footer-col">
+      <h4>内容栏目</h4>
+      <ul>
+        <li><a href="/#overview">作品概览</a></li>
+        <li><a href="/#picks">精选推荐</a></li>
+        <li><a href="/#updates">更新记录</a></li>
+        <li><a href="/#analysis">深度解析</a></li>
+        <li><a href="/#guide">观看指南</a></li>
+        <li><a href="/#timeline">时间线</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>常用检索</h4>
+      <ul>
+        <li><a href="/#faq">第 3 话加长段差异</a></li>
+        <li><a href="/#faq">片尾曲合唱版</a></li>
+        <li><a href="/#channels">黑兽2更新时间表</a></li>
+        <li><a href="/#channels">黑兽2角色关系图</a></li>
+        <li><a href="/#comments">第 2 话台词争议</a></li>
+        <li><a href="/#related">相关推荐标签</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>内容更新时间：2026-11-06，对应第 4 话分镜对照与版本核对表第 2 版。</span>
+    <span>© 2026 示例站点 · 条目数据为示例整理</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "黑兽2动漫免费观看",
+  "inLanguage": "zh-CN",
+  "description": "整理《黑兽2》动画的公开信息、各集进度、版本差异、观看前置条件与观众评价。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/#top?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "黑兽2目前一共更新了几话？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "截至2026年11月6日已公开4话，第3话片长26分12秒，其余三话在24分钟左右，官网话数表与节目页分集列表同步。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "第3话的导演剪辑版和普通版差在哪？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "差2分12秒，集中在主角与教团代表的走廊对话约1分05秒，以及片尾曲前的列队镜头约1分07秒，官方10月25日加长说明列出这两段。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "没看过第一季，直接看第1话会不会看不懂？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "第1话有3处直接引用前作，分别在第7分钟、第13分钟和第19分钟；只看前作第8话即可理解第3话加长段里出现的灰堡事件的动机层。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "片尾曲换人了吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "没有换曲。第2话起片尾使用合唱版音源，官方10月20日说明写明；字幕轨1显示演唱者A，轨2显示A与B，差别来自音源不同。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "哪些页面是真正能播完整一集的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看三处：完整分集列表、播放进度条、页面版权说明。三者齐全的通常是持牌平台节目页，需登录且地区匹配。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "第2话第14分钟那段对话为什么有争议？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "四句台词里黑牙成员对是否接受教团委派意见相反，没有明确谁占上风；有评论认为是刻意留白，也有评论认为信息不足，分歧在于这四句能否支撑第4话的角色选择。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "黑牙佣兵团的委托机制是怎么设定的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "委托分为王国军方清剿、教团护送、村镇悬赏三类，结算方式分别为按人头、按契约节点、以实物抵付，第2话和第4话各出现一次结算场景。"
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 移动菜单 ---------- */
+  var menuBtn = document.getElementById("menuBtn");
+  var mainNav = document.getElementById("mainNav");
+  if (menuBtn && mainNav) {
+    menuBtn.addEventListener("click", function () {
+      var open = mainNav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    mainNav.addEventListener("click", function (e) {
+      if (e.target.tagName === "A" && window.innerWidth <= 720) {
+        mainNav.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* ---------- 本地搜索 ---------- */
+  var searchInput = document.getElementById("siteSearch");
+  var searchHint = document.getElementById("searchHint");
+  var index = [
+    { t: "作品概览：暗黑奇幻续作设定", h: "/#overview" },
+    { t: "第1话 破城 首播信息", h: "/#updates" },
+    { t: "第2话 灰烬契约 台词争议", h: "/#comments" },
+    { t: "第3话 导演剪辑版加长段", h: "/#faq" },
+    { t: "第4话 兽潮再临 分镜对照", h: "/#analysis" },
+    { t: "第4话夜袭段 47卡拆镜", h: "/#detail" },
+    { t: "观看前置条件：账号、地区、字幕", h: "/#guide" },
+    { t: "片尾曲合唱版 字幕轨署名", h: "/#faq" },
+    { t: "黑牙佣兵团 三方阵营与委托机制", h: "/#faq" },
+    { t: "没看第一季的补番顺序", h: "/#guide" },
+    { t: "版本差异核对表 第2版", h: "/#updates" },
+    { t: "更新时间表 2026年10月至11月", h: "/#timeline" },
+    { t: "作画复盘：动作戏占比变化", h: "/#detail" },
+    { t: "相关推荐标签索引", h: "/#related" }
+  ];
+
+  function renderHint(q) {
+    if (!searchHint) return;
+    var key = (q || "").trim().toLowerCase();
+    if (!key) {
+      searchHint.classList.remove("show");
+      searchHint.innerHTML = "";
+      return;
+    }
+    var hits = index.filter(function (item) {
+      return item.t.toLowerCase().indexOf(key) !== -1;
+    }).slice(0, 6);
+
+    if (!hits.length) {
+      searchHint.innerHTML = "没有找到与“<strong>" + escapeHtml(q.trim()) + "</strong>”相关的条目。可试试“第3话”“分镜”“片尾曲”或“补番”。";
+    } else {
+      var html = "<strong>站内条目</strong><br>";
+      hits.forEach(function (item) {
+        html += '<a href="' + item.h + '" style="display:block;padding:3px 0;color:#1c1a2e">· ' + escapeHtml(item.t) + "</a>";
+      });
+      searchHint.innerHTML = html;
+    }
+    searchHint.classList.add("show");
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", function () { renderHint(searchInput.value); });
+    searchInput.addEventListener("focus", function () { if (searchInput.value.trim()) renderHint(searchInput.value); });
+    searchInput.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { searchHint.classList.remove("show"); searchInput.blur(); }
+    });
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".search-box")) searchHint.classList.remove("show");
+    });
+  }
+
+  /* ---------- 侧栏滚动高亮 ---------- */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll("#sideNav a"));
+  var sections = sideLinks.map(function (a) {
+    var id = a.getAttribute("href").replace("/#", "");
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function setActive() {
+    if (!sections.length) return;
+    var offset = 118;
+    var current = sections[0];
+    sections.forEach(function (sec) {
+      if (sec.getBoundingClientRect().top - offset <= 0) current = sec;
+    });
+    sideLinks.forEach(function (a) {
+      a.classList.toggle("active", a.getAttribute("href") === "/#" + current.id);
+    });
+  }
+
+  var ticking = false;
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () { setActive(); ticking = false; });
+      ticking = true;
+    }
+  }, { passive: true });
+  setActive();
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById("toTop");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 420) toTop.classList.add("show");
+    else toTop.classList.remove("show");
+  }, { passive: true });
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+})();
+</script>
+</body>
+        </html>
