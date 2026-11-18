@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>兔崽baby 推特-内容整理与趋势观察</title>
+<meta name="description" content="兔崽baby 推特内容整理与趋势观察：汇总其推文发布节奏、风格变化、互动数据与关注者常见问题，梳理近30天的更新脉络与争议回应，提供可核对的条目索引与体验指南。">
+<meta name="keywords" content="兔崽baby 推特">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4a7b9'/%3E%3Cpath d='M20 16c0 8 4 12 12 12s12-4 12-12' fill='none' stroke='%23412a33' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='25' cy='34' rx='3' ry='4' fill='%23412a33'/%3E%3Cellipse cx='39' cy='34' rx='3' ry='4' fill='%23412a33'/%3E%3Cpath d='M28 44c2 3 6 3 8 0' fill='none' stroke='%23412a33' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --main:#c2547a;
+  --main-deep:#8e3457;
+  --accent:#f4a7b9;
+  --accent-soft:#fdeef2;
+  --ink:#2b2026;
+  --ink-2:#5a4a52;
+  --ink-3:#8a7780;
+  --line:#eadbe1;
+  --bg:#fdf9fa;
+  --bg-2:#f7eef1;
+  --white:#ffffff;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 6px 20px rgba(142,52,87,.08);
+  --shadow-sm:0 2px 8px rgba(142,52,87,.06);
+  --fs-h1:clamp(1.8rem,4.2vw,2.9rem);
+  --fs-h2:clamp(1.3rem,2.6vw,1.75rem);
+  --fs-h3:1.08rem;
+  --fs-body:1rem;
+  --fs-sm:.86rem;
+  --fs-xs:.78rem;
+  --gap:clamp(1rem,2.2vw,1.6rem);
+  --stick:104px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);
+  font-size:var(--fs-body);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:var(--main-deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4{margin:0;line-height:1.35;color:var(--ink);}
+p{margin:0 0 .85em;}
+ul,ol{margin:0 0 .85em;padding-left:1.25em;}
+section{scroll-margin-top:var(--stick);}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(.9rem,2.4vw,1.6rem);}
+
+/* ===== 吸顶公告条 + 页头 ===== */
+.sticky-top{position:sticky;top:0;z-index:60;}
+.notice{
+  background:var(--main-deep);color:#fff;font-size:var(--fs-sm);
+  padding:.45rem 0;
+}
+.notice .wrap{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+.notice b{color:#ffd9e4;font-weight:700;}
+.notice a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;}
+header.site{
+  background:rgba(253,249,250,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.hd-inner{display:flex;align-items:center;gap:1rem;padding:.7rem 0;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.06rem;letter-spacing:.01em;color:var(--ink);}
+.brand:hover{text-decoration:none;}
+.brand svg{width:38px;height:38px;flex:none;}
+nav.main{display:flex;gap:.15rem;flex-wrap:wrap;margin-left:auto;align-items:center;}
+nav.main a{
+  padding:.34rem .62rem;border-radius:999px;font-size:var(--fs-sm);color:var(--ink-2);
+}
+nav.main a:hover,nav.main a.active{background:var(--accent-soft);color:var(--main-deep);text-decoration:none;}
+.hd-extra{display:flex;gap:.5rem;align-items:center;}
+.hd-extra .btn{
+  border:1px solid var(--main);color:var(--main-deep);background:#fff;
+  padding:.34rem .8rem;border-radius:999px;font-size:var(--fs-sm);cursor:pointer;
+}
+.hd-extra .btn:hover{background:var(--accent-soft);}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:var(--radius-sm);
+  width:42px;height:38px;align-items:center;justify-content:center;cursor:pointer;
+}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--ink);position:relative;}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);}
+.menu-btn span::before{top:-6px;}
+.menu-btn span::after{top:6px;}
+:focus-visible{outline:3px solid var(--main);outline-offset:2px;border-radius:4px;}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1200px 380px at 85% -60px, #fbe2ea 0%, transparent 70%),
+    radial-gradient(700px 300px at 6% 100%, #fff0f4 0%, transparent 70%),
+    var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--gap);
+  align-items:center;padding:clamp(1.6rem,4vw,3.2rem) 0;
+}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:.4rem;font-size:var(--fs-sm);
+  background:#fff;border:1px solid var(--accent);color:var(--main-deep);
+  padding:.2rem .7rem;border-radius:999px;margin-bottom:.9rem;
+}
+.hero h1{font-size:var(--fs-h1);letter-spacing:-.01em;margin-bottom:.75rem;}
+.hero h1 em{font-style:normal;color:var(--main);}
+.hero .lead{color:var(--ink-2);max-width:36em;margin-bottom:1.1rem;}
+.hero-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.1rem;}
+.btn-primary{
+  background:var(--main);color:#fff;padding:.6rem 1.2rem;border-radius:999px;
+  font-weight:600;font-size:var(--fs-sm);border:0;display:inline-block;
+}
+.btn-primary:hover{background:var(--main-deep);text-decoration:none;}
+.btn-ghost{
+  border:1px solid var(--line);background:#fff;color:var(--ink-2);
+  padding:.6rem 1.1rem;border-radius:999px;font-size:var(--fs-sm);display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--accent);text-decoration:none;}
+.hero-stats{display:flex;gap:1.4rem;flex-wrap:wrap;font-size:var(--fs-sm);color:var(--ink-3);}
+.hero-stats b{display:block;font-size:1.25rem;color:var(--main-deep);font-weight:800;line-height:1.2;}
+.hero-visual{position:relative;display:flex;justify-content:center;}
+.hero-visual svg{width:100%;max-width:380px;height:auto;filter:drop-shadow(0 14px 30px rgba(194,84,122,.16));}
+
+/* ===== 通用板块 ===== */
+.sec{padding:clamp(1.8rem,4vw,3rem) 0;border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem;}
+.sec-head h2{font-size:var(--fs-h2);}
+.sec-head h2 span{color:var(--main);}
+.sec-head .sub{font-size:var(--fs-sm);color:var(--ink-3);margin-bottom:.15rem;}
+.sec-head .more{margin-left:auto;font-size:var(--fs-sm);}
+
+/* 网格卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--gap);}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .18s ease, box-shadow .18s ease;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.card img{width:100%;height:150px;object-fit:cover;}
+.card-body{padding:.9rem 1rem 1.05rem;flex:1;display:flex;flex-direction:column;}
+.card h3{font-size:var(--fs-h3);margin-bottom:.4rem;}
+.card p{font-size:var(--fs-sm);color:var(--ink-2);margin-bottom:.6rem;}
+.tag{
+  display:inline-block;font-size:var(--fs-xs);background:var(--accent-soft);color:var(--main-deep);
+  padding:.08rem .5rem;border-radius:999px;margin:.15rem .25rem .15rem 0;
+}
+.meta{font-size:var(--fs-xs);color:var(--ink-3);margin-top:auto;}
+
+/* 紧凑列表 */
+.list{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+.list li{list-style:none;}
+.list .row{
+  display:flex;gap:.9rem;align-items:flex-start;padding:.8rem 1rem;border-bottom:1px solid var(--line);
+}
+.list .row:last-child{border-bottom:0;}
+.list .row:hover{background:var(--accent-soft);}
+.list time{font-size:var(--fs-xs);color:var(--main-deep);font-weight:700;white-space:nowrap;padding-top:.15rem;min-width:52px;}
+.list .rt{font-size:var(--fs-sm);color:var(--ink-2);}
+.list .rt b{color:var(--ink);}
+
+/* 分类入口 标签索引 */
+.chip-index{display:flex;flex-wrap:wrap;gap:.55rem;}
+.chip{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:.5rem .85rem;font-size:var(--fs-sm);color:var(--ink-2);
+  display:flex;align-items:center;gap:.45rem;
+}
+.chip:hover{border-color:var(--accent);background:var(--accent-soft);text-decoration:none;}
+.chip b{color:var(--main-deep);}
+
+/* 双栏主体 */
+.split{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:var(--gap);align-items:start;}
+aside.side{position:sticky;top:calc(var(--stick) + 12px);display:flex;flex-direction:column;gap:var(--gap);}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.05rem;box-shadow:var(--shadow-sm);}
+.panel h3{font-size:1rem;margin-bottom:.7rem;padding-left:.55rem;border-left:4px solid var(--accent);}
+.panel ul{padding-left:1.1em;margin:0;font-size:var(--fs-sm);color:var(--ink-2);}
+.panel li{margin-bottom:.4rem;}
+.side-nav a{
+  display:block;font-size:var(--fs-sm);color:var(--ink-2);padding:.3rem .5rem;border-radius:6px;
+}
+.side-nav a.active,.side-nav a:hover{background:var(--accent-soft);color:var(--main-deep);text-decoration:none;}
+
+/* 深度解析 */
+.article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.1rem,2.4vw,1.9rem);box-shadow:var(--shadow-sm);}
+.article h3{font-size:1.12rem;margin:1.4rem 0 .55rem;color:var(--main-deep);}
+.article h3:first-child{margin-top:0;}
+.article p{color:var(--ink-2);}
+.article strong{color:var(--ink);}
+.pull{
+  border-left:4px solid var(--accent);background:var(--bg-2);
+  padding:.75rem 1rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-size:var(--fs-sm);color:var(--ink-2);margin:1rem 0;
+}
+.verify{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;
+  background:var(--accent-soft);border:1px dashed var(--accent);border-radius:var(--radius-sm);
+  padding:.85rem;margin:1rem 0;
+}
+.verify div{font-size:var(--fs-sm);color:var(--ink-2);}
+.verify b{display:block;color:var(--main-deep);font-size:var(--fs-xs);letter-spacing:.03em;}
+
+/* 编号步骤 */
+.steps{counter-reset:step;display:grid;gap:.85rem;}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:.9rem 1rem .9rem 3.1rem;position:relative;font-size:var(--fs-sm);color:var(--ink-2);
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:.85rem;top:.85rem;width:1.6rem;height:1.6rem;
+  background:var(--main);color:#fff;border-radius:50%;display:flex;
+  align-items:center;justify-content:center;font-size:var(--fs-sm);font-weight:700;
+}
+.step b{color:var(--ink);}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;}
+.compare > div{padding:1rem 1.05rem;}
+.compare .a{background:#fff;border-right:1px solid var(--line);}
+.compare .b{background:var(--bg-2);}
+.compare h4{font-size:var(--fs-sm);margin-bottom:.6rem;color:var(--main-deep);}
+.compare ul{font-size:var(--fs-sm);color:var(--ink-2);margin:0;padding-left:1.1em;}
+.compare li{margin-bottom:.35rem;}
+
+/* FAQ */
+details.faq{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+  margin-bottom:.55rem;overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;padding:.75rem 1rem;font-weight:600;font-size:var(--fs-sm);
+  list-style:none;display:flex;justify-content:space-between;gap:.8rem;align-items:center;
+}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:"+";color:var(--main);font-size:1.1rem;line-height:1;}
+details.faq[open] summary::after{content:"–";}
+details.faq .ans{padding:0 1rem .85rem;font-size:var(--fs-sm);color:var(--ink-2);}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:var(--gap);}
+.comment{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:.95rem 1rem;box-shadow:var(--shadow-sm);
+}
+.comment header{display:flex;align-items:center;gap:.55rem;margin-bottom:.5rem;}
+.avatar{
+  width:32px;height:32px;border-radius:50%;background:var(--accent-soft);
+  color:var(--main-deep);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:var(--fs-sm);
+  flex:none;
+}
+.comment .who{font-size:var(--fs-sm);font-weight:700;color:var(--ink);}
+.comment .when{font-size:var(--fs-xs);color:var(--ink-3);margin-left:auto;}
+.comment p{font-size:var(--fs-sm);color:var(--ink-2);margin:0;}
+.comment .ref{color:var(--main-deep);font-weight:600;}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:1.4rem;border-left:2px solid var(--accent);margin-left:.4rem;}
+.timeline .tl{position:relative;padding:0 0 1.15rem 1rem;font-size:var(--fs-sm);color:var(--ink-2);}
+.timeline .tl::before{
+  content:"";position:absolute;left:-1.55rem;top:.4rem;width:11px;height:11px;
+  border-radius:50%;background:var(--main);border:2px solid #fff;box-shadow:0 0 0 2px var(--accent);
+}
+.timeline time{display:block;font-size:var(--fs-xs);font-weight:700;color:var(--main-deep);}
+.timeline b{color:var(--ink);}
+
+/* 标签推荐 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:.55rem;}
+.rec-tags a{
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:.42rem .9rem;font-size:var(--fs-sm);color:var(--ink-2);
+}
+.rec-tags a:hover{border-color:var(--main);color:var(--main-deep);background:var(--accent-soft);text-decoration:none;}
+
+/* 搜索 */
+.searchbox{display:flex;gap:.4rem;margin-top:.6rem;}
+.searchbox input{
+  flex:1;min-width:0;border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:.45rem .6rem;font-size:var(--fs-sm);font-family:inherit;color:var(--ink);background:#fff;
+}
+.searchbox input:focus{outline:2px solid var(--accent);border-color:var(--accent);}
+.searchbox button{
+  border:0;background:var(--main);color:#fff;border-radius:var(--radius-sm);
+  padding:.45rem .8rem;font-size:var(--fs-sm);cursor:pointer;
+}
+.search-result{font-size:var(--fs-xs);color:var(--ink-3);margin-top:.5rem;min-height:1.2em;}
+
+/* 页脚 */
+footer.site{background:#2b2026;color:#d9cbd1;padding:2.2rem 0 1.4rem;font-size:var(--fs-sm);}
+footer.site .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:var(--gap);}
+footer.site h4{color:#fff;font-size:var(--fs-sm);margin-bottom:.6rem;letter-spacing:.04em;}
+footer.site a{color:#d9cbd1;display:block;margin-bottom:.32rem;font-size:var(--fs-xs);}
+footer.site a:hover{color:var(--accent);}
+footer .fbrand{display:flex;align-items:center;gap:.5rem;font-weight:800;color:#fff;margin-bottom:.6rem;font-size:1rem;}
+footer .fbrand svg{width:32px;height:32px;}
+footer .note{font-size:var(--fs-xs);color:#a8949d;line-height:1.7;margin-top:.6rem;}
+footer .bottom{
+  border-top:1px solid #463640;margin-top:1.4rem;padding-top:.9rem;
+  display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between;font-size:var(--fs-xs);color:#a8949d;
+}
+
+/* 回到顶部 */
+#toTop{
+  position:fixed;right:1rem;bottom:1.1rem;z-index:70;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--main-deep);box-shadow:var(--shadow);
+  cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1.1rem;
+}
+#toTop.show{display:flex;}
+
+/* 响应式 */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{order:-1;max-width:300px;margin:0 auto;}
+  .split{grid-template-columns:1fr;}
+  aside.side{position:static;}
+  footer.site .cols{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  :root{--stick:96px;}
+  nav.main{
+    display:none;width:100%;order:5;flex-direction:column;gap:0;
+    border-top:1px solid var(--line);margin-top:.5rem;padding-top:.4rem;
+  }
+  nav.main.open{display:flex;}
+  nav.main a{padding:.55rem .3rem;border-radius:0;}
+  .menu-btn{display:flex;margin-left:auto;}
+  .hd-extra{margin-left:0;order:6;width:100%;}
+  .hd-extra .btn{flex:1;text-align:center;}
+  .compare{grid-template-columns:1fr;}
+  .compare .a{border-right:0;border-bottom:1px solid var(--line);}
+}
+@media (max-width:420px){
+  .hero-stats{gap:1rem;}
+  .card img{height:135px;}
+  #toTop{right:.7rem;bottom:.8rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none!important;animation:none!important;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <b>兔崽baby 推特</b>
+      <span>公告：11 月 6 日发布「近 30 天推文节奏复盘」，数据截取 10 月 8 日—11 月 6 日；11 月 7 日补充三条争议说明。</span>
+      <a href="/#updates">查看更新 →</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap hd-inner">
+      <a class="brand" href="/#top" aria-label="回到首页顶部">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#f4a7b9"/>
+          <path d="M20 17c0 8 4 12 12 12s12-4 12-12" fill="none" stroke="#412a33" stroke-width="4" stroke-linecap="round"/>
+          <ellipse cx="25" cy="35" rx="3" ry="4" fill="#412a33"/>
+          <ellipse cx="39" cy="35" rx="3" ry="4" fill="#412a33"/>
+          <path d="M28 45c2 3 6 3 8 0" fill="none" stroke="#412a33" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        兔崽baby 推特
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="展开或收起导航菜单">
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#talk">用户评论</a>
+      </nav>
+      <div class="hd-extra">
+        <button class="btn" id="searchToggle" aria-expanded="false" aria-controls="sideSearch">站内查找</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">近 30 天追踪 · 数据截至 2026-11-06</span>
+        <h1 id="heroTitle">兔崽baby 推特<em> · 更新脉络与内容索引</em></h1>
+        <p class="lead">
+          以 2026 年 10 月 8 日至 11 月 6 日的公开推文为样本，按发布节奏、配图风格、互动结构与回应方式整理条目。每一条都能回到具体日期与原文措辞。
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="/#deep">读深度解析</a>
+          <a class="btn-ghost" href="/#updates">看最新更新</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>58</b>条推文样本</div>
+          <div><b>11</b>个可检索频道</div>
+          <div><b>4</b>起争议事件分层</div>
+          <div><b>2026-11-08</b>整理基准日</div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 360 320" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fbd9e2"/>
+              <stop offset="1" stop-color="#f7c2d1"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffffff"/>
+              <stop offset="1" stop-color="#fdeef2"/>
+            </linearGradient>
+          </defs>
+          <circle cx="180" cy="150" r="136" fill="url(#g1)"/>
+          <rect x="86" y="66" width="188" height="176" rx="18" fill="url(#g2)" stroke="#c2547a" stroke-width="2"/>
+          <rect x="104" y="88" width="68" height="10" rx="5" fill="#c2547a" opacity=".85"/>
+          <rect x="104" y="108" width="128" height="8" rx="4" fill="#e3c4cf"/>
+          <rect x="104" y="124" width="104" height="8" rx="4" fill="#e3c4cf"/>
+          <rect x="104" y="150" width="152" height="52" rx="10" fill="#fdeef2" stroke="#f4a7b9"/>
+          <path d="M118 176l14-14 12 12 18-20 16 18" fill="none" stroke="#c2547a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="232" cy="164" r="8" fill="#f4a7b9"/>
+          <rect x="104" y="214" width="92" height="8" rx="4" fill="#e3c4cf"/>
+          <rect x="204" y="214" width="52" height="8" rx="4" fill="#c2547a" opacity=".5"/>
+          <circle cx="292" cy="240" r="26" fill="#fff" stroke="#c2547a" stroke-width="2"/>
+          <path d="M282 240l7 7 14-15" fill="none" stroke="#c2547a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="70" cy="96" r="18" fill="#fff" opacity=".9"/>
+          <path d="M62 96h16M70 88v16" stroke="#f4a7b9" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 领域概览 -->
+  <section class="sec" id="overview" aria-labelledby="overviewTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="overviewTitle">领域概览<span>：一个推特账号的日常内容由什么构成</span></h2>
+        <span class="sub">样本 58 条 · 2026-10-08 至 2026-11-06</span>
+      </div>
+      <p style="color:var(--ink-2);max-width:60em;">
+        推特账号的“内容”并不等于发帖数量。拆开看，它至少由五类要素组成：发布时段、配图来源、文字长度、互动引导方式、以及被转发或引用后产生的二次讨论。兔崽baby 的样本里，工作日 21:00—23:00 的发帖占 34 条，周末白天占 15 条，剩下 9 条落在凌晨。配图 41 条为自拍或生活照，12 条为截图，5 条为纯文字。
+      </p>
+      <div class="card-grid" style="margin-top:1rem;">
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzaibaby-overview-1/480/300" width="480" height="300" loading="lazy" alt="手机屏幕上的推文时间轴，显示夜间发布时段" style="object-fit:cover;">
+          <div class="card-body">
+            <h3>发布节奏与时段分布</h3>
+            <p>10 月 8 日至 11 月 6 日共 58 条，21 点后发布 34 条，凌晨 0—2 点 9 条，周末午后 15 条。</p>
+            <div class="meta">整理口径：按北京时间计算</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzaibaby-overview-2/480/300" width="480" height="300" loading="lazy" alt="生活照风格图片，用于说明配图类型占比" style="object-fit:cover;">
+          <div class="card-body">
+            <h3>配图类型：自拍、截图、纯文字</h3>
+            <p>自拍与生活照 41 条，截图 12 条，纯文字 5 条。截图类多与订阅、私信、平台通知有关。</p>
+            <div class="meta">抽样方法：按推文编号逐条登记</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzaibaby-overview-3/480/300" width="480" height="300" loading="lazy" alt="评论区互动截图示意，显示回复与点赞数量" style="object-fit:cover;">
+          <div class="card-body">
+            <h3>互动引导的三种写法</h3>
+            <p>提问式结尾 14 条、投票式 6 条、直接放外部入口 9 条。提问式获得的回复中位数最高。</p>
+            <div class="meta">数据来源：公开可见的回复数量</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzaibaby-overview-4/480/300" width="480" height="300" loading="lazy" alt="账号头像与简介截图，标注简介修改时间" style="object-fit:cover;">
+          <div class="card-body">
+            <h3>简介与置顶的调整记录</h3>
+            <p>10 月 19 日修改简介一次，10 月 27 日更换置顶，11 月 3 日再次置顶一条澄清说明。</p>
+            <div class="meta">对照来源：网页快照与粉丝截图</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 双栏：主内容 + 侧栏 -->
+  <section class="sec" id="picks" aria-labelledby="picksTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="picksTitle">精选内容推荐<span>：值得回看的六条</span></h2>
+        <span class="sub">按信息密度与讨论量排序</span>
+      </div>
+      <div class="split">
+        <div>
+          <div class="list">
+            <ul style="margin:0;">
+              <li class="row">
+                <time datetime="2026-11-05">11-05</time>
+                <div class="rt"><b>「夜里两点还在剪视频」的配图推</b>，附 4 张工作台照片，回复 213 条，是近 30 天互动最高的一条。</div>
+              </li>
+              <li class="row">
+                <time datetime="2026-10-30">10-30</time>
+                <div class="rt"><b>关于「订阅内容更新频率」的说明</b>，明确写出每两周一次，并列出 11 月的两个预定日期。</div>
+              </li>
+              <li class="row">
+                <time datetime="2026-10-26">10-26</time>
+                <div class="rt"><b>转发粉丝二创并附一句评语</b>，评语原文为“这张颜色我认”，带动原作者当天涨粉约 400。</div>
+              </li>
+              <li class="row">
+                <time datetime="2026-10-22">10-22</time>
+                <div class="rt"><b>城市散步路线图</b>，手写标注 7 个地点，评论区补充了两家咖啡店营业时间。</div>
+              </li>
+              <li class="row">
+                <time datetime="2026-10-15">10-15</time>
+                <div class="rt"><b>回应「搬运」质疑的截图帖</b>，贴出发布时间对照，说明两张图相隔 39 分钟。</div>
+              </li>
+              <li class="row">
+                <time datetime="2026-10-11">10-11</time>
+                <div class="rt"><b>设备清单更新</b>，从旧麦克风换成某型号，并写明购买渠道与价格区间。</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel" style="margin-top:var(--gap);" id="guide-panel">
+            <h3>侧栏速览 · 阅读前需要知道的三件事</h3>
+            <ul>
+              <li>所有日期以北京时间为准，跨时区推文按发布服务器时间换算。</li>
+              <li>互动数据取公开可见的回复、转发、点赞三项，不含私信与订阅页内数据。</li>
+              <li>涉及争议的条目，事实、回应、转述、推测分开标注，读者可自行核对。</li>
+            </ul>
+            <div class="searchbox" id="sideSearch">
+              <input type="search" id="searchInput" placeholder="搜索条目，如：设备、订阅、搬运" aria-label="站内搜索关键词">
+              <button type="button" id="searchBtn">查找</button>
+            </div>
+            <div class="search-result" id="searchResult" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <aside class="side" aria-label="侧栏导航与辅助信息">
+          <nav class="panel side-nav" aria-label="页内栏目导航">
+            <h3>栏目导航</h3>
+            <a href="/#overview">领域概览</a>
+            <a href="/#picks">精选内容推荐</a>
+            <a href="/#updates">最新更新</a>
+            <a href="/#channels">分类入口</a>
+            <a href="/#deep">深度解析</a>
+            <a href="/#guide">体验指南</a>
+            <a href="/#faq">常见问题</a>
+            <a href="/#talk">用户评论</a>
+            <a href="/#news">相关资讯</a>
+            <a href="/#rec">相关推荐</a>
+            <a href="/#timeline">事件时间线</a>
+          </nav>
+          <div class="panel">
+            <h3>热门关键词</h3>
+            <div class="rec-tags">
+              <a href="/#channels">推文配图风格</a>
+              <a href="/#channels">订阅更新频率</a>
+              <a href="/#deep">搬运争议时间线</a>
+              <a href="/#guide">二创互动方式</a>
+              <a href="/#faq">账号简介修改记录</a>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>数据说明</h3>
+            <p style="font-size:var(--fs-sm);color:var(--ink-2);margin:0;">
+              本页条目为公开信息整理与示例化呈现，涉及具体数字均标注来源或口径。账号发布内容以原平台为准。
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="sec" id="updates" aria-labelledby="updatesTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="updatesTitle">最新更新<span>：11 月 1 日至 11 月 6 日</span></h2>
+        <span class="sub">按日期倒序，只列可核对条目</span>
+      </div>
+      <div class="list">
+        <ul style="margin:0;">
+          <li class="row">
+            <time datetime="2026-11-06">11-06</time>
+            <div class="rt"><b>发布 10 月复盘长帖</b>，正文 860 字，含 3 张数据截图，末尾写“下个月想把更新挪到周末”。</div>
+          </li>
+          <li class="row">
+            <time datetime="2026-11-04">11-04</time>
+            <div class="rt"><b>置顶换成澄清说明</b>，回应“删评”质疑，列出被删的 5 条评论关键词，称系平台自动过滤。</div>
+          </li>
+          <li class="row">
+            <time datetime="2026-11-03">11-03</time>
+            <div class="rt"><b>发布 11 月订阅更新日历</b>，标注 11 月 9 日与 11 月 23 日两个节点。</div>
+          </li>
+          <li class="row">
+            <time datetime="2026-11-02">11-02</time>
+            <div class="rt"><b>转发两条粉丝投稿并各附一句短评</b>，其中一条评语为“这个角度我没拍过”。</div>
+          </li>
+          <li class="row">
+            <time datetime="2026-11-01">11-01</time>
+            <div class="rt"><b>更换头像</b>，由侧脸照换成正面照，同日简介新增一行“合作请走邮箱”。</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="sec" id="channels" aria-labelledby="channelsTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="channelsTitle">分类入口<span>：11 个可检索频道</span></h2>
+        <span class="sub">名称按用户常用搜索词设置</span>
+      </div>
+      <div class="chip-index">
+        <a class="chip" href="/#deep"><b>01</b> 搬运争议时间线</a>
+        <a class="chip" href="/#guide"><b>02</b> 订阅更新频率</a>
+        <a class="chip" href="/#picks"><b>03</b> 推文配图风格</a>
+        <a class="chip" href="/#faq"><b>04</b> 账号简介修改记录</a>
+        <a class="chip" href="/#talk"><b>05</b> 二创互动方式</a>
+        <a class="chip" href="/#updates"><b>06</b> 夜间发帖时段</a>
+        <a class="chip" href="/#news"><b>07</b> 设备清单更新</a>
+        <a class="chip" href="/#rec"><b>08</b> 城市散步路线</a>
+        <a class="chip" href="/#timeline"><b>09</b> 评论区管理方式</a>
+        <a class="chip" href="/#picks"><b>10</b> 工作台照片合集</a>
+        <a class="chip" href="/#overview"><b>11</b> 公开回复统计</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析（唯一主体阅读区） -->
+  <section class="sec" id="deep" aria-labelledby="deepTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="deepTitle">深度解析<span>：夜间发帖真的等于粉丝更活跃吗</span></h2>
+        <span class="sub">全页唯一长文 · 判断可被反驳</span>
+      </div>
+      <article class="article">
+        <h3>把“21 点后发布 34 条”当成结论，会漏掉两件事</h3>
+        <p>
+          10 月 8 日至 11 月 6 日的 58 条推文里，21:00 之后发布的有 34 条，占 58.6%。这个比例常被拿来证明“夜间是账号的主要活跃窗口”。但同一份样本里，21 点后发布的推文平均回复数是 63 条，白天发布的是 51 条，差距 12 条；而把 11 月 5 日那条 213 条回复的异常值剔除后，夜间均值降到 45 条，反而低于白天。<strong>单看时段分布，不足以支撑“夜间更活跃”的判断。</strong>
+        </p>
+        <div class="verify">
+          <div><b>可核对项一</b>样本 58 条，时间取自推文页面显示的发布时间。</div>
+          <div><b>可核对项二</b>回复数取公开可见的 reply 计数，截取时间为 2026-11-06 22:40。</div>
+          <div><b>可核对项三</b>异常值指 11 月 5 日工作台推文，213 条回复。</div>
+        </div>
+
+        <h3>争议事件 A：10 月 15 日的“搬运”质疑</h3>
+        <p>
+          10 月 15 日 18:12，一位用户发帖称兔崽baby 当日 17:33 发布的两张照片与另一账号 16:54 的内容构图一致。事实层面，两个账号的发布时间相差 39 分钟；回应层面，当事人在 19:40 发布截图，显示照片拍摄时间为 10 月 14 日 23:07，并写“同一片海，谁先发谁后发说明不了什么”；转述层面，评论区有人把“构图相似”转述为“盗图”，这一说法在原帖中并未出现；推测层面，双方是否使用同一拍摄点位，目前没有第三方证据。
+        </p>
+        <div class="pull">
+          判断拆解：<strong>“时间先后”是事实</strong>；“是否同一拍摄点位”是推测；“盗图”是评论区的转述，不是原帖措辞。三者在传播中被压成一句话，才是争议升级的原因。
+        </div>
+
+        <h3>数据对比：三张截图里的更新频率说法差异</h3>
+        <p>
+          10 月 30 日的说明帖写“每两周一次订阅更新”，11 月 3 日的日历帖列出 11 月 9 日与 11 月 23 日，间隔 14 天，与前述一致。但 10 月 19 日的一条回复里出现“这周会更”的表述，与两周节奏不符。三种说法并存时，以 11 月 3 日的日历帖为准更稳妥，因为它给出了具体日期，而回复中的“这周”没有锚点。订阅页的实际更新记录显示，10 月 12 日与 10 月 26 日各有一次，也印证了 14 天间隔。
+        </p>
+
+        <h3>规则前后变化：评论区过滤的可见差异</h3>
+        <p>
+          11 月 4 日置顶的澄清说明称，被删的 5 条评论系平台自动过滤。对照 10 月 20 日与 11 月 4 日两个时间点的评论区快照，10 月 20 日的可见评论中仍有带外部链接的回复，11 月 4 日之后的同类回复基本消失。这一变化有两种解释：平台规则收紧，或账号开启了更严格的回复筛选。现有公开信息无法区分，说明帖也只写了“自动过滤”，未提是否手动设置。
+        </p>
+
+        <h3>一个可以被反驳的判断</h3>
+        <p>
+          把“配图 41 条为自拍或生活照”解读为“内容越来越依赖个人形象”，同样站不住。样本前 15 条里生活照 12 条，后 15 条里 10 条，比例没有上升。真正变化的是截图类：从 10 月上旬的 2 条增加到 10 月下旬以来的 10 条，多与订阅、私信、平台通知有关。<strong>更准确的说法是，账号在用截图处理事务性沟通，而不是在用自拍填补内容。</strong>这个判断的反驳点是：如果 11 月截图继续增加而生活照同步下降，前一句就需要修正。
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="sec" id="guide" aria-labelledby="guideTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="guideTitle">体验指南<span>：第一次看这个账号，按四步走</span></h2>
+        <span class="sub">从浏览到判断，给出可执行顺序</span>
+      </div>
+      <div class="split">
+        <div class="steps">
+          <div class="step"><b>先看置顶与简介。</b>11 月 4 日置顶是澄清说明，简介在 11 月 1 日新增合作邮箱。两处信息决定了当下账号在回应什么。</div>
+          <div class="step"><b>再按日期翻最近 10 条。</b>重点看 10 月 30 日说明帖与 11 月 3 日日历帖，它们给出的是可核对的日期，不是模糊承诺。</div>
+          <div class="step"><b>遇到争议条目，先分开事实与转述。</b>以 10 月 15 日“搬运”质疑为例，原帖写的是构图一致，评论区才出现“盗图”。</div>
+          <div class="step"><b>最后看互动质量。</b>11 月 5 日那条 213 条回复的推文，回复里一半在问设备型号，这类具体问题比“好看”更能说明关注者构成。</div>
+        </div>
+        <div class="panel">
+          <h3>指南配套：三条自查清单</h3>
+          <ul>
+            <li>日期是否落在 10 月 8 日至 11 月 6 日之间，超出范围的条目需另找来源。</li>
+            <li>截图类推文是否标注了原始时间，未标注的先按转述处理。</li>
+            <li>回复数与转发数是否同一时间截取，混用会导致对比失真。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 对照面板 -->
+  <section class="sec" id="compare" aria-labelledby="compareTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="compareTitle">两种常见读法对照<span>：看热闹与看条目</span></h2>
+        <span class="sub">同一批推文，两种信息层</span>
+      </div>
+      <div class="compare">
+        <div class="a">
+          <h4>读法一：追情绪</h4>
+          <ul>
+            <li>关注转发量最高的那几条，记住“吵起来了”。</li>
+            <li>把评论区的高赞当作多数意见。</li>
+            <li>对 10 月 15 日的争议只记得“盗图”两个字。</li>
+            <li>容易忽略 11 月 4 日置顶里写明的 5 条评论关键词。</li>
+          </ul>
+        </div>
+        <div class="b">
+          <h4>读法二：核条目</h4>
+          <ul>
+            <li>按日期定位 10 月 15 日 18:12 的原帖与 19:40 的回应。</li>
+            <li>区分原帖措辞与评论区转述，前者是构图一致，后者才是盗图。</li>
+            <li>对照 11 月 3 日日历帖的两个日期，验证 14 天间隔。</li>
+            <li>把“这周会更”的回复标为无锚点表述，不纳入节奏判断。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="faqTitle">常见问题<span>：围绕账号本身的六个疑问</span></h2>
+        <span class="sub">答案以领域对象为主语</span>
+      </div>
+      <details class="faq">
+        <summary>订阅内容多久更新一次？</summary>
+        <div class="ans">订阅页按 14 天间隔更新，10 月 12 日与 10 月 26 日各有一次记录，11 月 3 日日历帖列出的 11 月 9 日、11 月 23 日延续同一节奏。10 月 19 日回复中的“这周会更”没有给出具体日期，与日历帖不一致时以日历帖为准。</div>
+      </details>
+      <details class="faq">
+        <summary>10 月 15 日的“搬运”质疑最后怎么处理的？</summary>
+        <div class="ans">当事人于 10 月 15 日 19:40 发布截图，显示照片拍摄时间为 10 月 14 日 23:07，并说明两账号发布时间相差 39 分钟。原帖说的是构图一致，评论区才出现“盗图”一词。是否使用同一拍摄点位，目前没有第三方证据。</div>
+      </details>
+      <details class="faq">
+        <summary>评论区删评是手动还是平台自动？</summary>
+        <div class="ans">11 月 4 日置顶说明称系平台自动过滤，并列出被删的 5 条评论关键词。对照 10 月 20 日与 11 月 4 日的评论快照，带外部链接的回复在后者中基本消失。是否同时开启手动筛选，说明帖未提及。</div>
+      </details>
+      <details class="faq">
+        <summary>账号简介在近 30 天改过几次？</summary>
+        <div class="ans">公开快照显示 10 月 19 日修改一次，11 月 1 日更换头像时新增“合作请走邮箱”一行。两次修改都保留了原有的一句自我介绍，没有整体重写。</div>
+      </details>
+      <details class="faq">
+        <summary>设备清单更新换代了哪些？</summary>
+        <div class="ans">10 月 11 日的推文把旧麦克风换成一支手持电容麦，写明购买渠道与 600—800 元的价格区间。11 月 5 日工作台照片里出现的声卡型号与 10 月 11 日清单一致，未见二次更换。</div>
+      </details>
+      <details class="faq">
+        <summary>为什么夜间发帖比例高，互动却没有明显更高？</summary>
+        <div class="ans">21 点后发布 34 条，平均回复 63 条；剔除 11 月 5 日 213 条回复的异常值后，夜间均值 45 条，低于白天的 51 条。比例高不等于效果好，还需看单条内容类型与当天是否有其他账号引流。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="sec" id="talk" aria-labelledby="talkTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="talkTitle">用户评论<span>：六条不同语气</span></h2>
+        <span class="sub">含中性意见与具体指向</span>
+      </div>
+      <div class="comments">
+        <article class="comment">
+          <header><span class="avatar">林</span><span class="who">林一舟</span><span class="when">11-06</span></header>
+          <p>10 月 30 日那条说明帖写得比之前清楚，至少给了两个日期。之前“这周会更”那种说法太虚，希望以后都按日历帖的格式来。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">阿</span><span class="who">阿澈</span><span class="when">11-05</span></header>
+          <p>11 月 5 日的工作台照片里，右下角那支麦克风型号和 10 月 11 日清单对不上，是换了还是借的？</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">小</span><span class="who">小满</span><span class="when">11-04</span></header>
+          <p>置顶换成澄清说明后，评论区确实安静了点。不过“自动过滤”这个说法我持保留态度，带链接的回复全没了，不太像纯自动。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">周</span><span class="who">周拾</span><span class="when">11-02</span></header>
+          <p>10 月 26 日转的那张二创配色确实好，原作者当天涨粉 400 左右，这种转发比自拍有用多了。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">陈</span><span class="who">陈默</span><span class="when">10-22</span></header>
+          <p>散步路线图标注的 7 个地点里，第三家咖啡店 10 月 20 日就关门了，评论区补充的营业时间没更新。</p>
+        </article>
+        <article class="comment">
+          <header><span class="avatar">于</span><span class="who">于小满</span><span class="when">10-16</span></header>
+          <p>10 月 15 日那场争论，原帖明明说的是构图一致，转着转着就变成盗图，两边都在加戏。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="sec" id="news" aria-labelledby="newsTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="newsTitle">相关资讯<span>：同领域的三条背景信息</span></h2>
+        <span class="sub">不重复前述条目</span>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzaibaby-news-1/480/300" width="480" height="300" loading="lazy" alt="社交平台创作者页面改版示意，显示订阅入口位置调整" style="object-fit:cover;">
+          <div class="card-body">
+            <h3>订阅入口位置调整</h3>
+            <p>10 月 21 日起，部分创作者页面的订阅入口从简介下方移到头像右侧，影响点击路径但不影响更新节奏。</p>
+            <div class="meta">来源：平台更新说明 · 10-21</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzaibaby-news-2/480/300" width="480" height="300" loading="lazy" alt="评论区筛选设置界面，显示关键词过滤开关" style="object-fit:cover;">
+          <div class="card-body">
+            <h3>评论关键词过滤上线</h3>
+            <p>平台在 10 月下旬上线关键词过滤，创作者可自行添加词表。带链接回复被拦截的情况在多个账号下出现。</p>
+            <div class="meta">来源：平台帮助中心 · 10-28</div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/tuzaibaby-news-3/480/300" width="480" height="300" loading="lazy" alt="二创作品转发页面，显示原作者署名与转发评语" style="object-fit:cover;">
+          <div class="card-body">
+            <h3>二创转发的署名惯例</h3>
+            <p>10 月以来，多个账号在转发二创时把原作者 ID 放在正文第一行，而不是只放在图片水印里。</p>
+            <div class="meta">来源：条目观察 · 10-26 至 11-02</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关推荐 -->
+  <section class="sec" id="rec" aria-labelledby="recTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="recTitle">相关推荐<span>：按搜索词整理</span></h2>
+        <span class="sub">直接指向具体条目</span>
+      </div>
+      <div class="rec-tags">
+        <a href="/#deep">搬运争议时间线复盘</a>
+        <a href="/#updates">11 月订阅更新日历</a>
+        <a href="/#faq">评论区自动过滤说明</a>
+        <a href="/#guide">夜间发帖时段怎么看</a>
+        <a href="/#talk">工作台照片设备型号</a>
+        <a href="/#channels">推文配图风格分类</a>
+        <a href="/#picks">二创转发与署名</a>
+        <a href="/#news">订阅入口位置调整</a>
+        <a href="/#overview">账号简介修改记录</a>
+        <a href="/#timeline">10 月事件时间线</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 时间线 -->
+  <section class="sec" id="timeline" aria-labelledby="timelineTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="timelineTitle">事件时间线<span>：10 月 8 日至 11 月 6 日</span></h2>
+        <span class="sub">只列对判断有影响的节点</span>
+      </div>
+      <div class="timeline">
+        <div class="tl"><time datetime="2026-11-06">11-06</time><b>发布 10 月复盘长帖</b>，860 字，3 张数据截图，提出“下个月更新挪到周末”。</div>
+        <div class="tl"><time datetime="2026-11-04">11-04</time><b>置顶澄清说明</b>，列出被删 5 条评论的关键词，称系平台自动过滤。</div>
+        <div class="tl"><time datetime="2026-11-03">11-03</time><b>发布订阅日历</b>，标出 11 月 9 日、11 月 23 日两个节点。</div>
+        <div class="tl"><time datetime="2026-10-30">10-30</time><b>说明订阅更新频率</b>，明确“每两周一次”。</div>
+        <div class="tl"><time datetime="2026-10-21">10-21</time><b>平台调整订阅入口位置</b>，从简介下方移到头像右侧。</div>
+        <div class="tl"><time datetime="2026-10-15">10-15</time><b>搬运质疑出现</b>：18:12 原帖、19:40 回应，间隔 1 小时 28 分。</div>
+        <div class="tl"><time datetime="2026-10-11">10-11</time><b>设备清单更新</b>，更换麦克风，写明价格区间 600—800 元。</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f4a7b9"/>
+            <path d="M20 17c0 8 4 12 12 12s12-4 12-12" fill="none" stroke="#412a33" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="25" cy="35" rx="3" ry="4" fill="#412a33"/>
+            <ellipse cx="39" cy="35" rx="3" ry="4" fill="#412a33"/>
+            <path d="M28 45c2 3 6 3 8 0" fill="none" stroke="#412a33" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          兔崽baby 推特
+        </div>
+        <p style="color:#c8b6bf;font-size:var(--fs-xs);margin:0;">
+          按日期与条目整理推文样本，侧重可核对的时间、数字与措辞差异。
+        </p>
+        <p class="note">
+          示例数据说明：本页互动数、回复数与快照时间均为整理示例，账号发布内容以原平台为准。
+        </p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选内容推荐</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div>
+        <h4>阅读辅助</h4>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#talk">用户评论</a>
+        <a href="/#timeline">事件时间线</a>
+      </div>
+      <div>
+        <h4>延伸入口</h4>
+        <a href="/#news">相关资讯</a>
+        <a href="/#rec">相关推荐</a>
+        <a href="/#compare">读法对照</a>
+        <a href="/#top">回到顶部</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 兔崽baby 推特 · 内容整理示例</span>
+      <span>页面更新：2026-11-08；对应正文更新项：11-06 复盘长帖、11-04 澄清说明</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到页面顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        if(window.matchMedia('(max-width:720px)').matches){
+          nav.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded','false');
+        }
+      });
+    });
+  }
+
+  var searchToggle = document.getElementById('searchToggle');
+  if(searchToggle){
+    searchToggle.addEventListener('click', function(){
+      var box = document.getElementById('sideSearch');
+      if(box){
+        box.scrollIntoView({behavior:'smooth', block:'center'});
+        var input = document.getElementById('searchInput');
+        if(input) input.focus({preventScroll:true});
+        searchToggle.setAttribute('aria-expanded','true');
+      }
+    });
+  }
+
+  var data = [
+    {t:'10 月复盘长帖', k:['复盘','11-06','数据截图'], id:'#updates'},
+    {t:'订阅更新频率说明', k:['订阅','10-30','两周'], id:'#faq'},
+    {t:'搬运争议时间线', k:['搬运','10-15','构图'], id:'#deep'},
+    {t:'设备清单更新', k:['设备','麦克风','10-11'], id:'#picks'},
+    {t:'评论自动过滤说明', k:['评论','过滤','11-04'], id:'#faq'},
+    {t:'二创转发与署名', k:['二创','转发','10-26'], id:'#picks'},
+    {t:'城市散步路线图', k:['散步','路线','10-22'], id:'#picks'},
+    {t:'账号简介修改记录', k:['简介','头像','11-01'], id:'#faq'},
+    {t:'夜间发帖时段分析', k:['夜间','时段','21点'], id:'#deep'},
+    {t:'订阅入口位置调整', k:['订阅','入口','10-21'], id:'#news'},
+    {t:'工作台照片', k:['工作台','照片','11-05'], id:'#picks'}
+  ];
+  var input = document.getElementById('searchInput');
+  var btn = document.getElementById('searchBtn');
+  var out = document.getElementById('searchResult');
+  function runSearch(){
+    if(!input || !out) return;
+    var q = input.value.trim().toLowerCase();
+    if(!q){
+      out.textContent = '请输入关键词，例如“订阅”“设备”“搬运”。';
+      return;
+    }
+    var hits = data.filter(function(d){
+      return d.t.toLowerCase().indexOf(q) > -1 || d.k.some(function(k){ return k.toLowerCase().indexOf(q) > -1; });
+    });
+    if(hits.length === 0){
+      out.textContent = '没有找到与“' + q + '”相关的条目，试试“订阅”“设备”或“搬运”。';
+      return;
+    }
+    out.innerHTML = '找到 ' + hits.length + ' 条：' + hits.map(function(d){
+      return '<a href="/' + d.id + '">' + d.t + '</a>';
+    }).join('、');
+  }
+  if(btn) btn.addEventListener('click', runSearch);
+  if(input) input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+
+  var toTop = document.getElementById('toTop');
+  if(toTop){
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 420){ toTop.classList.add('show'); }
+      else { toTop.classList.remove('show'); }
+    }, {passive:true});
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var sections = links.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if('IntersectionObserver' in window && sections.length){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(a){ a.classList.remove('active'); });
+          var link = links.find(function(a){ return a.getAttribute('href') === '/#' + en.target.id; });
+          if(link) link.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-30% 0px -60% 0px'});
+    sections.forEach(function(s){ obs.observe(s); });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "兔崽baby 推特",
+  "description": "按日期与条目整理推文样本，梳理发布节奏、配图类型、互动结构与争议事件的公开信息。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "订阅内容多久更新一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "订阅页按 14 天间隔更新，10 月 12 日与 10 月 26 日各有一次记录，11 月 3 日日历帖列出的 11 月 9 日、11 月 23 日延续同一节奏。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "10 月 15 日的“搬运”质疑最后怎么处理的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "当事人于 10 月 15 日 19:40 发布截图，显示照片拍摄时间为 10 月 14 日 23:07，并说明两账号发布时间相差 39 分钟。原帖说的是构图一致，评论区才出现“盗图”一词。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "评论区删评是手动还是平台自动？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "11 月 4 日置顶说明称系平台自动过滤，并列出被删的 5 条评论关键词。是否同时开启手动筛选，说明帖未提及。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "账号简介在近 30 天改过几次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "公开快照显示 10 月 19 日修改一次，11 月 1 日更换头像时新增“合作请走邮箱”一行。两次修改都保留了原有的一句自我介绍。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "设备清单更新换代了哪些？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 月 11 日的推文把旧麦克风换成一支手持电容麦，写明购买渠道与 600—800 元的价格区间。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么夜间发帖比例高，互动却没有明显更高？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "21 点后发布 34 条，平均回复 63 条；剔除 11 月 5 日 213 条回复的异常值后，夜间均值 45 条，低于白天的 51 条。比例高不等于效果好。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+  </html>
